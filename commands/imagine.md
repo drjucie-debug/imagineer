@@ -29,28 +29,44 @@ Escreva o brief no idioma do pedido. Não entregue uma lista genérica de "tend�
    - Antes, leia CLAUDE.md/README do projeto atual, se houver, e ancore o desafio nele.
    - Se o **convidado** não dá para inferir do pedido nem do projeto (ex.: "vender online" sem dizer o quê nem para quem), faça **uma** pergunta com AskUserQuestion oferecendo 3 perfis prováveis. Qualquer outro contexto que falte (país, orçamento), assuma, declare em uma linha e siga.
 
+Subagentes não veem a conversa, a skill nem uns aos outros: tudo que precisam vai no prompt. Cada fase diz o que passar.
+
 2. **Varredura do futuro** → subagente `futurist-scout`
+   - **Passe:** pergunta real, convidado, suposições declaradas e o número de buscas (5 em `--quick`, 8–15 no modo completo).
    - Estado atual, casos de referência fora do setor, sinais fracos, tecnologias emergentes, mudanças de comportamento.
-   - Toda afirmação factual com fonte.
+   - Toda afirmação factual com fonte e etiqueta de tipo de fonte.
 
 3. **Blue Sky** → subagente `blue-sky-dreamer`
+   - **Passe:** pergunta real, convidado, a saída inteira do scout e as ideias já registradas (fase 0).
    - Mínimo de 20 ideias (ou `--ideas N`). Pelo menos 5 "impossíveis hoje".
    - Proibido descartar nesta fase.
 
-4. **História e jornada** → `story-architect` e `guest-advocate` em paralelo
-   - Selecionar 3–5 ideias com maior potencial de encantamento + diferenciação.
-   - Para cada uma: nome, logline, weenie, momento mágico, jornada antes/durante/depois.
+4. **Shortlist (você)**
+   - Dê nota 1–5 às ideias nos critérios de references/horizontes.md: Encantamento, Diferenciação, Dor resolvida, Viabilidade. Some.
+   - Leve as 3–5 de maior soma (3 em `--quick`). Se nenhuma tiver Encantamento 5, troque a última pela de maior Encantamento — o filtro não pode matar a ousadia.
+   - Mostre a tabela no brief, com uma linha dizendo por que cada uma foi escolhida.
 
-5. **Plussing** → subagente `devils-plusser`
-   - 3 rodadas por conceito: "o que torna isso inesquecível?", "o que o convidado contaria a um amigo?", "o que ninguém do setor ousaria fazer?".
+5. **História e jornada** → `story-architect` e `guest-advocate` em paralelo
+   - **Passe** a ambos: as ideias da shortlist (nome + cena), convidado, momento da verdade e os sinais do scout ligados a cada uma.
+   - Para cada uma: nome, logline, weenie, momento mágico, jornada antes/durante/depois, personas e dores.
 
-6. **Engenharia de viabilidade** → subagente `show-engineer`
+6. **Plussing** → subagente `devils-plusser`
+   - **Passe:** os conceitos do story-architect + a jornada e as dores do guest-advocate.
+   - Rodadas por conceito: encantamento, atrito zero, ousadia (só a primeira em `--quick`).
+
+7. **Veto do convidado** → subagente `guest-advocate` (segunda passada)
+   - **Passe:** as versões plussed e os 10 princípios de references/principios.md, em especial "Encantar, nunca manipular".
+   - O plussing é onde entram urgência falsa, escassez inventada, gamificação compulsiva, coleta de dado sem necessidade. Cada item vetado volta com a correção, e a correção substitui o plus original.
+
+8. **Engenharia de viabilidade** → subagente `show-engineer`
+   - **Passe:** os conceitos já vetados/corrigidos, os critérios H1/H2/H3 de references/horizontes.md (o agente não enxerga a pasta da skill), o país e o setor.
    - Possível hoje / em 2 anos / em 5 anos. Custo relativo, riscos (técnicos, legais, éticos), MVP de menor custo.
-   - Classifique em H1, H2, H3 (critérios em references/horizontes.md da skill — cole-os no prompt do `show-engineer`, que não enxerga a pasta da skill).
+   - Todo conceito H2 ou H3 sai com um **embrião H1**: um pedaço testável hoje.
 
-7. **Entrega**
+9. **Entrega**
    - Monte o resultado no formato de references/brief-template.md da skill.
    - Termine com **um experimento de validação por conceito** que caiba em 2 semanas.
+   - Antes de mostrar, confira references/checklist.md item a item. Corrija o que falhar; não entregue com item falho sem dizer qual e por quê.
 
 ## Regras
 

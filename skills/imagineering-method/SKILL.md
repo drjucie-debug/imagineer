@@ -12,19 +12,21 @@ Este método transforma um pedido vago ("pesquise novas formas de vender carros"
 - "Pesquise novas formas de…", "como reinventar…", "qual o futuro de…", "ideias inovadoras para…", "pense fora da caixa", "pense como a Disney".
 - Qualquer projeto em que o usuário queira ir além da melhoria incremental.
 
-## O ciclo (7 fases)
+## O ciclo (9 fases)
 
 | # | Fase | Papel | Saída |
 |---|---|---|---|
 | 1 | Reenquadrar | Imagineer-chefe | Pergunta "Como poderíamos…?", convidado, momento da verdade |
 | 2 | Varrer o futuro | futurist-scout | Fatos, sinais fracos, analogias, fontes |
 | 3 | Blue Sky | blue-sky-dreamer | 20+ ideias com 8 lentes |
-| 4 | História + Jornada | story-architect + guest-advocate | 3–5 conceitos com weenie e momento mágico |
-| 5 | Plussing | devils-plusser | 3 rodadas por conceito |
-| 6 | Engenharia | show-engineer | Viabilidade, H1/H2/H3, MVP |
-| 7 | Entrega | Imagineer-chefe | Brief no formato do template |
+| 4 | Shortlist | Imagineer-chefe | Notas 1–5 (horizontes.md), 3–5 escolhidas com motivo |
+| 5 | História + Jornada | story-architect + guest-advocate | Conceitos com weenie e momento mágico |
+| 6 | Plussing | devils-plusser | 3 rodadas por conceito |
+| 7 | Veto do convidado | guest-advocate | Plus manipuladores vetados e corrigidos |
+| 8 | Engenharia | show-engineer | Viabilidade, H1/H2/H3, embrião H1, MVP |
+| 9 | Entrega | Imagineer-chefe | Brief no template, conferido no checklist |
 
-**No Claude Code:** delegue cada papel ao subagente de mesmo nome. Fases 4 (os dois papéis) rodam em paralelo.
+**No Claude Code:** delegue cada papel ao subagente de mesmo nome. Na fase 5 os dois papéis rodam em paralelo. Subagentes não veem a conversa nem a pasta da skill: passe no prompt tudo o que a fase precisa (ver `commands/imagine.md`, linhas **Passe:**).
 **No app Claude (sem subagentes):** interprete cada papel em sequência, marcando claramente a fase. Use pesquisa web na fase 2.
 
 ## Princípios inegociáveis
@@ -56,6 +58,7 @@ Use `references/brief-template.md`. Mantenha:
 - Cada conceito com nome, logline, momento mágico e horizonte.
 - Fontes no fim.
 - Fechamento com experimentos de 2 semanas.
+- Antes de entregar, confira `references/checklist.md`.
 
 ## Memória do projeto
 

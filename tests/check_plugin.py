@@ -50,6 +50,19 @@ def main():
             assert cited in known, f"{c.name} cites unknown `{cited}`"
     assert frontmatter(SKILL / "SKILL.md")["name"] == "imagineering-method"
     assert (SKILL / "references/ideas-format.md").exists(), "ideas.md format undocumented"
+
+    # Method guarantees: scored shortlist, late veto, quality gate, source tags, handoffs.
+    template = (SKILL / "references/brief-template.md").read_text()
+    for field in ("Embrião H1", "Shortlist", "Veto do convidado"):
+        assert field in template, f"brief template missing {field}"
+    assert (SKILL / "references/checklist.md").exists(), "quality checklist missing"
+    assert "references/checklist.md" in (SKILL / "SKILL.md").read_text()
+    imagine = (ROOT / "commands/imagine.md").read_text()
+    assert imagine.index("Shortlist") < imagine.index("story-architect"), "shortlist must precede story"
+    assert imagine.rindex("guest-advocate") > imagine.index("devils-plusser"), "veto must follow plussing"
+    assert imagine.count("**Passe:**") >= 5, "each delegated phase must say what to hand over"
+    assert "[fornecedor]" in (ROOT / "agents/futurist-scout.md").read_text(), "source tags missing"
+    assert "Detran" not in (ROOT / "agents/show-engineer.md").read_text(), "car example leaked"
     check_session_hook()
     print("ok")
 

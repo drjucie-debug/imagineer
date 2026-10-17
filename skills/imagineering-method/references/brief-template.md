@@ -24,6 +24,10 @@
 | # | Nome | Cena | Lente | Ousadia |
 |---|---|---|---|---|
 
+## 3b. Shortlist
+| Ideia | Encantamento | Diferenciação | Dor | Viabilidade | Soma | Por que entrou |
+|---|---|---|---|---|---|---|
+
 ## 4. Conceitos
 ### Conceito A — {{nome}}
 - **Logline:**
@@ -33,7 +37,9 @@
 - **Jornada:** {{antes → durante → depois}}
 - **Plussing:** {{os plus mais fortes}}
 - **Detalhe escondido:**
+- **Veto do convidado:** {{o que foi vetado no plussing e a correção, ou "nada vetado"}}
 - **Horizonte:** H1 | H2 | H3
+- **Embrião H1:** {{para H2/H3: o pedaço testável hoje; para H1: "—"}}
 - **MVP em 2 semanas:**
 - **Métrica:**
 
@@ -51,4 +57,4 @@
 {{5 razões pelas quais isso pode falhar e o plus para cada uma}}
 
 ## Fontes
-- {{[Título](URL)}}
+- {{[tipo] [Título](URL)}} — tipos: [primária] [empresa sobre si] [fornecedor] [imprensa] [estimativa]

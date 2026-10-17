@@ -61,7 +61,8 @@ claude-imagineer/
 │       ├── tecnicas.md               # técnicas de ideação e plussing
 │       ├── horizontes.md             # modelo H1/H2/H3 e critérios
 │       ├── brief-template.md         # formato do entregável
-│       └── ideas-format.md           # memória .imagineer/ do projeto
+│       ├── ideas-format.md           # memória .imagineer/ do projeto
+│       └── checklist.md              # conferência antes de entregar
 ├── tests/check_plugin.py             # verificação estrutural
 └── examples/vender-carros.md         # exemplo completo
 ```
@@ -78,16 +79,22 @@ Pedido do usuário
                     [3] blue-sky-dreamer (20+ ideias)
                           │
                           ▼
-           [4] story-architect + guest-advocate (3–5 conceitos)
+                    [4] Shortlist com nota (3–5)
                           │
                           ▼
-                [5] devils-plusser (3 rodadas de plussing)
+           [5] story-architect + guest-advocate
                           │
                           ▼
-                [6] show-engineer (viabilidade, H1/H2/H3)
+                [6] devils-plusser (plussing)
                           │
                           ▼
-                 Imagineering Brief + próximos passos
+                [7] guest-advocate (veto pós-plussing)
+                          │
+                          ▼
+                [8] show-engineer (H1/H2/H3 + embrião H1)
+                          │
+                          ▼
+           [9] Brief conferido no checklist + experimentos
 ```
 
 No Claude Code, os agentes rodam como subagentes (em paralelo quando independentes). No Claude (app), a skill `imagineering-method` executa as mesmas fases em sequência, interpretando cada papel.
