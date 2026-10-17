@@ -10,7 +10,7 @@ Aplique **plussing** a: **$ARGUMENTS**
 
 Se o argumento for um caminho de arquivo, leia-o primeiro.
 
-Use o subagente `devils-plusser` e entregue:
+Use o subagente `devils-plusser` (tipo `imagineer:devils-plusser`) e entregue:
 
 1. **Versão atual** em 2 linhas (o que é, para quem).
 2. **Rodada 1 — Encantamento:** o que transformaria isso em algo que o convidado conta para os amigos?

@@ -8,7 +8,7 @@ allowed-tools: Agent, WebSearch, WebFetch
 
 Faça uma varredura de futuro sobre: **$ARGUMENTS**
 
-Use o subagente `futurist-scout`. Entregue, com fontes etiquetadas por tipo ([primária], [empresa sobre si], [fornecedor], [imprensa], [estimativa]):
+Use o subagente `futurist-scout` (tipo `imagineer:futurist-scout`). Entregue, com fontes etiquetadas por tipo ([primária], [empresa sobre si], [fornecedor], [imprensa], [estimativa]):
 
 1. **Hoje** — como funciona, números-chave, maiores dores.
 2. **Movimentos recentes** — o que mudou nos últimos 24 meses.

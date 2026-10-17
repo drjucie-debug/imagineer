@@ -43,7 +43,8 @@ claude-imagineer/
 │   ├── plus.md                       # /plus     — melhora uma ideia existente
 │   ├── story.md                      # /story    — transforma ideia em narrativa
 │   ├── guest-journey.md              # /guest-journey — mapa da experiência
-│   └── future-scan.md                # /future-scan — sinais e tendências
+│   ├── future-scan.md                # /future-scan — sinais e tendências
+│   └── ideas.md                      # /ideas — status e resultados das ideias
 ├── hooks/
 │   ├── hooks.json                    # SessionStart
 │   └── session-start.sh              # resume .imagineer/ideas.md na sessão
@@ -132,8 +133,8 @@ python3 tests/check_plugin.py   # imprime "ok" se a estrutura está íntegra
 ## Roadmap
 
 - **v0.1** — comandos, agentes, skill, template e exemplo.
-- **v0.2** (atual) — memória de ideias por projeto (`.imagineer/ideas.md` + `briefs/`); hook `SessionStart` que injeta o resumo dessa memória (silencioso em projetos sem `.imagineer/`); `/imagine` lê CLAUDE.md/README do projeto e pergunta quem é o convidado quando o pedido é vago.
-- **v0.3** — servidor MCP "Idea Vault" com busca de ideias anteriores, votação e status (sonho → piloto → lançado).
+- **v0.2** — memória de ideias por projeto (`.imagineer/ideas.md` + `briefs/`); hook `SessionStart` que injeta o resumo dessa memória (silencioso em projetos sem `.imagineer/`); `/imagine` lê CLAUDE.md/README do projeto e pergunta quem é o convidado quando o pedido é vago.
+- **v0.3** (atual) — shortlist com nota, veto pós-plussing, checklist de qualidade, fontes etiquetadas; `/ideas` para status e resultado de experimentos (cobre o "Idea Vault" sem servidor MCP — servidor só se houver várias pessoas votando).
 - **v0.4** — modo "Imagineer contínuo": tarefa agendada semanal que varre sinais do futuro de cada projeto ativo e envia um "postcard do futuro".
 - **v1.0** — artifact interativo de quadro (Blue Sky board) com arrastar ideias entre horizontes.
 

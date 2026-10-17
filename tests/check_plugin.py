@@ -63,6 +63,16 @@ def main():
     assert imagine.count("**Passe:**") >= 5, "each delegated phase must say what to hand over"
     assert "[fornecedor]" in (ROOT / "agents/futurist-scout.md").read_text(), "source tags missing"
     assert "Detran" not in (ROOT / "agents/show-engineer.md").read_text(), "car example leaked"
+
+    # Installed agents are namespaced; the skill must stand alone (Claude app upload).
+    for c in COMMANDS:
+        if "subagente" in c.read_text():
+            assert "imagineer:" in c.read_text(), f"{c.name}: agent type must be imagineer:<name>"
+    assert "commands/" not in (SKILL / "SKILL.md").read_text(), "skill must not depend on commands/"
+    assert (ROOT / "commands/ideas.md").exists(), "no way to update idea status/results"
+    assert "Resultado" in (SKILL / "references/ideas-format.md").read_text()
+    assert (ROOT / "LICENSE").exists(), "plugin.json says MIT but LICENSE missing"
+    assert not (ROOT / "templates").exists(), "stale templates/ dir"
     check_session_hook()
     print("ok")
 

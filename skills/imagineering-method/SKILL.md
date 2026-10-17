@@ -26,7 +26,13 @@ Este método transforma um pedido vago ("pesquise novas formas de vender carros"
 | 8 | Engenharia | show-engineer | Viabilidade, H1/H2/H3, embrião H1, MVP |
 | 9 | Entrega | Imagineer-chefe | Brief no template, conferido no checklist |
 
-**No Claude Code:** delegue cada papel ao subagente de mesmo nome. Na fase 5 os dois papéis rodam em paralelo. Subagentes não veem a conversa nem a pasta da skill: passe no prompt tudo o que a fase precisa (ver `commands/imagine.md`, linhas **Passe:**).
+**No Claude Code:** delegue cada papel ao subagente de mesmo nome. Na fase 5 os dois papéis rodam em paralelo. Os tipos levam o prefixo do plugin (`imagineer:futurist-scout`…). Subagentes não veem a conversa nem a pasta da skill — passe no prompt:
+- **scout:** pergunta real, convidado, suposições, nº de buscas;
+- **dreamer:** pergunta real, convidado, saída do scout, ideias já registradas;
+- **story + guest:** shortlist (nome + cena), convidado, momento da verdade, sinais ligados;
+- **plusser:** conceitos + jornada e dores;
+- **guest (veto):** versões plussed + `references/principios.md`;
+- **engineer:** conceitos corrigidos + `references/horizontes.md`, país e setor.
 **No app Claude (sem subagentes):** interprete cada papel em sequência, marcando claramente a fase. Use pesquisa web na fase 2.
 
 ## Princípios inegociáveis

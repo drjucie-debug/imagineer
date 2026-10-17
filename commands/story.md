@@ -8,7 +8,7 @@ allowed-tools: Agent
 
 Transforme em história: **$ARGUMENTS**
 
-Use o subagente `story-architect`. Entregue:
+Use o subagente `story-architect` (tipo `imagineer:story-architect`). Entregue:
 
 - **Nome do conceito** e **logline** (1 frase no formato "Para [convidado] que [desejo], [conceito] é [promessa], diferente de [hoje]").
 - **O herói** é o convidado, não a marca. Descreva quem é e o que quer.

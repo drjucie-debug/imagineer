@@ -20,6 +20,6 @@ awk -F'|' -v latest="${latest#"${CLAUDE_PROJECT_DIR:-$PWD}/"}" '
     if (latest != "") print "Último brief: " latest
     if (n) print "Ideias ativas mais recentes:"
     for (i = n; i > 0 && i > n - 5; i--) print active[i]
-    print "Use como ponto de partida quando o assunto for ideias ou inovação, e não repita ideias já registradas."
+    print "Use como ponto de partida quando o assunto for ideias ou inovação, e não repita ideias já registradas. Status e resultados: /imagineer:ideas."
   }
 ' "$dir/ideas.md"

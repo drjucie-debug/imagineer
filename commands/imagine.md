@@ -29,7 +29,7 @@ Escreva o brief no idioma do pedido. Não entregue uma lista genérica de "tend�
    - Antes, leia CLAUDE.md/README do projeto atual, se houver, e ancore o desafio nele.
    - Se o **convidado** não dá para inferir do pedido nem do projeto (ex.: "vender online" sem dizer o quê nem para quem), faça **uma** pergunta com AskUserQuestion oferecendo 3 perfis prováveis. Qualquer outro contexto que falte (país, orçamento), assuma, declare em uma linha e siga.
 
-Subagentes não veem a conversa, a skill nem uns aos outros: tudo que precisam vai no prompt. Cada fase diz o que passar.
+Subagentes não veem a conversa, a skill nem uns aos outros: tudo que precisam vai no prompt. Cada fase diz o que passar. O tipo de cada subagente leva o prefixo do plugin: `imagineer:futurist-scout`, `imagineer:blue-sky-dreamer` etc.
 
 2. **Varredura do futuro** → subagente `futurist-scout`
    - **Passe:** pergunta real, convidado, suposições declaradas e o número de buscas (5 em `--quick`, 8–15 no modo completo).

@@ -8,7 +8,7 @@ allowed-tools: Agent, WebSearch
 
 Mapeie a jornada do convidado para: **$ARGUMENTS**
 
-Use o subagente `guest-advocate`. Entregue uma tabela por etapa:
+Use o subagente `guest-advocate` (tipo `imagineer:guest-advocate`). Entregue uma tabela por etapa:
 
 `Etapa | O que o convidado faz | O que sente | Dor hoje | Oportunidade de encantamento`
 
