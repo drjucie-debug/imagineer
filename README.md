@@ -1,8 +1,8 @@
-# Imagineer
+# Claude Imagineer
 
 > "É meio divertido fazer o impossível." — princípio que guia o plugin
 
-**Imagineer** é um plugin para Claude e Claude Code que pensa *à frente* de qualquer projeto. Em vez de responder "como fazer X um pouco melhor", ele responde "como seria X se fosse projetado hoje do zero, como uma experiência inesquecível — e qual o caminho de engenharia para chegar lá".
+**Claude Imagineer** é um plugin para Claude e Claude Code que pensa *à frente* de qualquer projeto. Em vez de responder "como fazer X um pouco melhor", ele responde "como seria X se fosse projetado hoje do zero, como uma experiência inesquecível — e qual o caminho de engenharia para chegar lá".
 
 O método se inspira na forma de trabalhar dos Imagineers da Disney: misturar sonhadores e engenheiros na mesma sala, começar pela história, projetar a partir do olhar do convidado e nunca considerar uma ideia terminada ("plussing").
 
@@ -155,6 +155,10 @@ claude plugin update imagineer@imagineer
 - **v0.3** — shortlist com nota, veto pós-plussing, checklist de qualidade, fontes etiquetadas; `/ideas` para status e resultado de experimentos (cobre o "Idea Vault" sem servidor MCP — servidor só se houver várias pessoas votando).
 - **v0.6** — modo "Imagineer contínuo": tarefa agendada semanal que varre sinais do futuro de cada projeto ativo e envia um "postcard do futuro".
 - **v1.0** — artifact interativo de quadro (Blue Sky board) com arrastar ideias entre horizontes.
+
+## O nome
+
+O nome é uma homenagem homônima a **Claude Coats** (1913–1992), Disney Legend e um dos maiores Imagineers: pintor de fundos de *Branca de Neve* a *Cinderela*, foi para a WED Enterprises em 1955 e assinou a direção de arte de Pirates of the Caribbean e da metade sombria da Haunted Mansion — a mansão dos "999 fantasmas felizes" que serve de exemplo ao teste do coração desta skill. A coincidência com o nome do modelo que roda o plugin é o resto da graça. Por regra da Anthropic, o id técnico do plugin não pode começar com "claude-", então ele se instala como `imagineer`.
 
 ## Marca e afiliação
 
