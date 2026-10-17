@@ -26,7 +26,7 @@ O plugin entrega um **Imagineering Brief** com:
 8. **Horizontes** — H1 (fazer na segunda-feira), H2 (piloto em 6–18 meses), H3 (aposta de futuro).
 9. **Próximos passos** — experimento de menor custo para validar cada conceito.
 
-Veja o exemplo completo em [`examples/vender-carros.md`](examples/vender-carros.md).
+Exemplos: [`examples/moda-online.md`](examples/moda-online.md) (ciclo real de 9 fases, `--quick`, com fontes) e [`examples/vender-carros.md`](examples/vender-carros.md) (ilustrativo, sem pesquisa).
 
 ---
 
@@ -65,7 +65,7 @@ claude-imagineer/
 │       ├── ideas-format.md           # memória .imagineer/ do projeto
 │       └── checklist.md              # conferência antes de entregar
 ├── tests/check_plugin.py             # verificação estrutural
-└── examples/vender-carros.md         # exemplo completo
+└── examples/                        # moda-online.md (real), vender-carros.md (ilustrativo)
 ```
 
 ## Como o ciclo roda
