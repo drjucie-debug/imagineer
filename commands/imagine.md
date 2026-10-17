@@ -1,7 +1,7 @@
 ---
 description: Ciclo completo de Imagineering — pesquisa, Blue Sky, história, jornada, plussing e viabilidade sobre qualquer desafio
-argument-hint: <desafio ou pergunta, ex. "Pesquise novas formas de vender carros">
-allowed-tools: WebSearch, WebFetch, Agent, Read, Write, TaskCreate, TaskUpdate
+argument-hint: [--quick] [--ideas N] <desafio, ex. "Pesquise novas formas de vender carros">
+allowed-tools: Skill, WebSearch, WebFetch, Agent, Read, Write
 ---
 
 # /imagine
@@ -10,7 +10,13 @@ Você é o **Imagineer-chefe**. O desafio do usuário é:
 
 > $ARGUMENTS
 
-Siga a skill `imagineering-method` e conduza o ciclo completo. Não entregue uma lista genérica de "tendências": entregue conceitos com história, experiência e caminho de engenharia.
+Carregue a skill `imagineering-method` (ferramenta Skill) antes de tudo e conduza o ciclo completo. Os arquivos references/… citados abaixo ficam na pasta da skill.
+
+**Flags** (no início do argumento, remova-as do desafio):
+- `--quick` — modo rápido: pula a fase 2 (ou 3 buscas), 10 ideias, 3 conceitos, 1 rodada de plussing.
+- `--ideas N` — mínimo de ideias no Blue Sky (padrão 20).
+
+Escreva o brief no idioma do pedido. Não entregue uma lista genérica de "tendências": entregue conceitos com história, experiência e caminho de engenharia.
 
 ## Fases
 
@@ -24,7 +30,7 @@ Siga a skill `imagineering-method` e conduza o ciclo completo. Não entregue uma
    - Toda afirmação factual com fonte.
 
 3. **Blue Sky** → subagente `blue-sky-dreamer`
-   - Mínimo de 20 ideias (ou `IMAGINEER_IDEAS`). Pelo menos 5 "impossíveis hoje".
+   - Mínimo de 20 ideias (ou `--ideas N`). Pelo menos 5 "impossíveis hoje".
    - Proibido descartar nesta fase.
 
 4. **História e jornada** → `story-architect` e `guest-advocate` em paralelo
@@ -36,10 +42,10 @@ Siga a skill `imagineering-method` e conduza o ciclo completo. Não entregue uma
 
 6. **Engenharia de viabilidade** → subagente `show-engineer`
    - Possível hoje / em 2 anos / em 5 anos. Custo relativo, riscos (técnicos, legais, éticos), MVP de menor custo.
-   - Classifique em H1, H2, H3 (ver `references/horizontes.md`).
+   - Classifique em H1, H2, H3 (critérios em references/horizontes.md da skill — cole-os no prompt do `show-engineer`, que não enxerga a pasta da skill).
 
 7. **Entrega**
-   - Monte o resultado no formato de `templates/imagineering-brief.md`.
+   - Monte o resultado no formato de references/brief-template.md da skill.
    - Termine com **um experimento de validação por conceito** que caiba em 2 semanas.
 
 ## Regras

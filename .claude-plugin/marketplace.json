@@ -1,0 +1,14 @@
+{
+  "name": "claude-imagineer",
+  "owner": {
+    "name": "Juciê",
+    "email": "drjucie@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "claude-imagineer",
+      "source": "./",
+      "description": "Pensa à frente de qualquer projeto com o método dos Imagineers."
+    }
+  ]
+}

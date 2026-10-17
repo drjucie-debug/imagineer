@@ -34,7 +34,9 @@ Veja o exemplo completo em [`examples/vender-carros.md`](examples/vender-carros.
 
 ```
 claude-imagineer/
-├── .claude-plugin/plugin.json        # manifesto
+├── .claude-plugin/
+│   ├── plugin.json                   # manifesto
+│   └── marketplace.json              # marketplace de um plugin só
 ├── commands/                         # comandos de barra
 │   ├── imagine.md                    # /imagine  — ciclo completo
 │   ├── blue-sky.md                   # /blue-sky — só a explosão de ideias
@@ -54,8 +56,9 @@ claude-imagineer/
 │   └── references/
 │       ├── principios.md             # os princípios de Imagineering
 │       ├── tecnicas.md               # técnicas de ideação e plussing
-│       └── horizontes.md             # modelo H1/H2/H3 e critérios
-├── templates/imagineering-brief.md   # formato do entregável
+│       ├── horizontes.md             # modelo H1/H2/H3 e critérios
+│       └── brief-template.md         # formato do entregável
+├── tests/check_plugin.py             # verificação estrutural
 └── examples/vender-carros.md         # exemplo completo
 ```
 
@@ -88,9 +91,9 @@ No Claude Code, os agentes rodam como subagentes (em paralelo quando independent
 ## Instalação (Claude Code)
 
 ```bash
-# a partir de um marketplace local
-/plugin marketplace add ./caminho/para/marketplace
-/plugin install claude-imagineer
+# a pasta do plugin já é um marketplace
+/plugin marketplace add ~/Downloads/claude-imagineer
+/plugin install claude-imagineer@claude-imagineer
 
 # ou, para testar durante o desenvolvimento
 claude --plugin-dir ./claude-imagineer
@@ -98,13 +101,22 @@ claude --plugin-dir ./claude-imagineer
 
 No app Claude, o conteúdo de `skills/imagineering-method` pode ser enviado como skill personalizada.
 
-## Configuração opcional
+## Opções do `/imagine`
 
-| Variável | Padrão | Efeito |
+| Flag | Padrão | Efeito |
 |---|---|---|
-| `IMAGINEER_DEPTH` | `full` | `quick` pula pesquisa e faz 1 rodada de plussing |
-| `IMAGINEER_IDEAS` | `20` | quantidade mínima de ideias no Blue Sky |
-| `IMAGINEER_LANG` | `pt-BR` | idioma do brief |
+| `--quick` | desligado | pula pesquisa, 10 ideias, 3 conceitos, 1 rodada de plussing |
+| `--ideas N` | `20` | quantidade mínima de ideias no Blue Sky |
+
+O brief sai no idioma do pedido.
+
+Exemplo: `/imagine --quick --ideas 30 novas formas de vender carros`
+
+## Desenvolvimento
+
+```bash
+python3 tests/check_plugin.py   # imprime "ok" se a estrutura está íntegra
+```
 
 ## Roadmap
 

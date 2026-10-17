@@ -51,7 +51,7 @@ Ver `references/horizontes.md` — critérios para H1, H2, H3 e a matriz Encanta
 
 ## Formato de entrega
 
-Use `templates/imagineering-brief.md` (na raiz do plugin). Mantenha:
+Use `references/brief-template.md`. Mantenha:
 - Sumário executivo de 5 linhas no topo.
 - Cada conceito com nome, logline, momento mágico e horizonte.
 - Fontes no fim.
@@ -59,6 +59,6 @@ Use `templates/imagineering-brief.md` (na raiz do plugin). Mantenha:
 
 ## Calibragem
 
-- Pedido curto ou `IMAGINEER_DEPTH=quick`: pule a fase 2 (ou faça 3 buscas), 10 ideias, 3 conceitos, 1 rodada de plussing.
+- Pedido curto ou flag `--quick`: pule a fase 2 (ou faça 3 buscas), 10 ideias, 3 conceitos, 1 rodada de plussing.
 - Pedido amplo ("o futuro do varejo"): faça a fase 2 completa e 5 conceitos.
 - Se o usuário tem um projeto em andamento (CLAUDE.md, README, arquivos), leia antes e ancore os conceitos nele.
