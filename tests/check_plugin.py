@@ -87,6 +87,18 @@ def main():
     quick = next(l for l in imagine.splitlines() if l.startswith("- `--quick`"))
     assert "conversa principal" in quick and "guest-advocate" in quick, quick
 
+    # Real-WDI engine: story first, heart test, "Yes, if", Ten Commandments.
+    principios = (SKILL / "references/principios.md").read_text()
+    for must in ("Dez Mandamentos", "Sim, se", "Encantar, nunca manipular", "weenie"):
+        assert must in principios, f"principios.md missing {must}"
+    assert "Teste do coração" in (SKILL / "references/tecnicas.md").read_text()
+    skill_text = (SKILL / "SKILL.md").read_text()
+    assert "A história primeiro" in skill_text and "Sim, se" in skill_text
+    assert "A história primeiro" in imagine, "phase 1 must produce a story, not a business question"
+    assert "teste do coração" in imagine, "shortlist needs the heart-test gate"
+    assert "Sim, se" in (ROOT / "agents/show-engineer.md").read_text(), "engineer must answer 'Sim, se'"
+    assert "Dez Mandamentos" in (SKILL / "references/checklist.md").read_text()
+
     # Creation requests ("imagine novos pokémons") must get the things themselves, not a strategy.
     assert (SKILL / "references/creation-template.md").exists(), "no template for creation mode"
     for f in [SKILL / "SKILL.md", ROOT / "commands/imagine.md", spark,

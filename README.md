@@ -78,7 +78,7 @@ claude-imagineer/
 Pedido do usuário
       │
       ▼
-[1] Reenquadrar ──► [2] futurist-scout (pesquisa)
+[1] A história primeiro ─► [2] futurist-scout (pesquisa)
                           │
                           ▼
                     [3] blue-sky-dreamer (20+ ideias)
@@ -146,9 +146,10 @@ claude plugin update imagineer@imagineer
 
 - **v0.1** — comandos, agentes, skill, template e exemplo.
 - **v0.2** — memória de ideias por projeto (`.imagineer/ideas.md` + `briefs/`); hook `SessionStart` que injeta o resumo dessa memória (silencioso em projetos sem `.imagineer/`); `/imagine` lê CLAUDE.md/README do projeto e pergunta quem é o convidado quando o pedido é vago.
-- **v0.4** (atual) — modo criação: pedidos de *coisas* (criaturas, personagens, produtos, nomes) entregam as coisas com ficha, em vez de estratégia; regra "nunca troque o entregável"; `/spark` para um conceito rápido.
+- **v0.5** (atual) — motor refundado no método real da WDI: a história primeiro, teste do coração, "Sim, se…", Dez Mandamentos de Mickey no checklist (fontes em `skills/imagineering-method/references/principios.md`).
+- **v0.4** — modo criação: pedidos de *coisas* (criaturas, personagens, produtos, nomes) entregam as coisas com ficha, em vez de estratégia; regra "nunca troque o entregável"; `/spark` para um conceito rápido.
 - **v0.3** — shortlist com nota, veto pós-plussing, checklist de qualidade, fontes etiquetadas; `/ideas` para status e resultado de experimentos (cobre o "Idea Vault" sem servidor MCP — servidor só se houver várias pessoas votando).
-- **v0.5** — modo "Imagineer contínuo": tarefa agendada semanal que varre sinais do futuro de cada projeto ativo e envia um "postcard do futuro".
+- **v0.6** — modo "Imagineer contínuo": tarefa agendada semanal que varre sinais do futuro de cada projeto ativo e envia um "postcard do futuro".
 - **v1.0** — artifact interativo de quadro (Blue Sky board) com arrastar ideias entre horizontes.
 
 ## Nota sobre nome

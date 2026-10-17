@@ -14,9 +14,11 @@ Este método transforma um pedido vago ("pesquise novas formas de vender carros"
 
 ## O ciclo (9 fases)
 
+Compacta as 7 fases oficiais da WDI (Blue Sky → Conceito → Viabilidade → Design → Produção → Instalação → Abertura) numa conversa:
+
 | # | Fase | Papel | Saída |
 |---|---|---|---|
-| 1 | Reenquadrar | Imagineer-chefe | Pergunta "Como poderíamos…?", convidado, momento da verdade |
+| 1 | A história primeiro | Imagineer-chefe | História em 1 frase com coração; convidado-herói; lugar; momento da verdade |
 | 2 | Varrer o futuro | futurist-scout | Fatos, sinais fracos, analogias, fontes |
 | 3 | Blue Sky | blue-sky-dreamer | 20+ ideias com 8 lentes |
 | 4 | Shortlist | Imagineer-chefe | Notas 1–5 (horizontes.md), 3–5 escolhidas com motivo |
@@ -56,19 +58,15 @@ Ambíguo? Pergunte numa linha. Os dois juntos ("novos sabores e como vendê-los"
 - Veto: ofensa, estereótipo cultural, adequação ao público (ex.: criança), semelhança com algo existente.
 - Engenharia: vira **"Como tornar real"** curto — protótipo (esboço, mock, receita), e direitos/IP quando o universo é de terceiros (criação de fã ≠ uso comercial).
 
-## Princípios inegociáveis
+## O motor: pensar como um Imagineer
 
-Leia `references/principios.md`. Resumo:
+Três leis regem todas as fases (detalhe e fontes em `references/principios.md`):
 
-1. **Sonhar e filtrar são fases separadas.** Nunca avalie viabilidade durante o Blue Sky.
-2. **História antes de produto.** Se não cabe numa cena, não está pronto.
-3. **O convidado é o herói.** Projete a partir dos olhos de quem vive a experiência.
-4. **Weenie.** Todo conceito tem algo que puxa a pessoa de longe.
-5. **Plussing.** Nenhuma ideia está terminada.
-6. **Atenção ao detalhe.** O detalhe escondido é o que vira lenda.
-7. **Inspiração de fora.** Pelo menos metade das referências vem de outros setores.
-8. **Ousadia com caminho.** Toda ideia H3 tem uma versão H1 testável.
-9. **Ética do encantamento.** Encantar, nunca manipular. O `guest-advocate` tem poder de veto.
+1. **A história primeiro.** A fase 1 não produz "pergunta de negócio": produz uma história em UMA frase com coração — herói (o convidado), desejo, transformação, lugar. Pesquisa, ideias e engenharia servem a ela, nunca o contrário.
+2. **O convidado é a câmera.** Tudo se escreve como cena desenhável, em primeira pessoa, no presente. Se não dá para desenhar ou maquetar, ainda está abstrato.
+3. **"Sim, se…".** Viabilidade nunca responde "não dá"; responde "sim, se [condição]". A condição vira requisito, define o horizonte ou vira o embrião H1.
+
+Regras de sala: sonhar e filtrar nunca na mesma fase; metade das referências vem de fora do setor; toda ideia H3 tem embrião H1; encantar, nunca manipular (o `guest-advocate` veta). O padrão de qualidade são os **Dez Mandamentos de Mickey** (Sklar) — o checklist da entrega deriva deles.
 
 ## Técnicas
 

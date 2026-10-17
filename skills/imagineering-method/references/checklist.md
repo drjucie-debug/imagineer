@@ -11,3 +11,5 @@ Confira cada item. Item falho: corrija, ou declare no brief qual falhou e por qu
 6. **Experimento de 2 semanas** — um por conceito, com dono e métrica.
 7. **Fontes etiquetadas** — todo fato da fase 2 tem fonte com tipo; números de [empresa sobre si] e [fornecedor] estão sinalizados como tal no texto.
 8. **Inspiração de fora** — ao menos metade das analogias vem de outro setor.
+9. **Uma história por vez (Dez Mandamentos)** — cada conceito tem a história em uma frase com coração escrita no brief, e nenhum detalhe a contradiz.
+10. **Weenie e diversão** — todo conceito tem weenie, e a experiência diverte mais do que explica ("um quilo de diversão para cada grama de tratamento").

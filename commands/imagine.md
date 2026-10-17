@@ -25,8 +25,9 @@ Escreva o brief no idioma do pedido. Não entregue uma lista genérica de "tend�
 
 1. **Modo (você)** — leia "Dois modos" na skill. **Modo criação** se o pedido pede coisas (criaturas, personagens, produtos, nomes, histórias); **modo estratégia** se pede como (vender, reinventar, crescer). Nunca troque o entregável. No modo criação, cada fase abaixo segue a variante da skill e a entrega usa references/creation-template.md; avise cada subagente: "MODO CRIAÇÃO — o entregável são as criações em si".
 
-1b. **Reenquadrar (você)**
-   - Escreva o desafio literal e depois a *pergunta real* por trás dele ("Como poderíamos…?").
+1b. **A história primeiro (você)**
+   - Antes de pesquisa ou ideia: escreva **a história em UMA frase com coração** — herói (o convidado), desejo, transformação, lugar. Ela comanda o ciclo inteiro.
+   - Depois o desafio literal e a *pergunta real* ("Como poderíamos…?") — a serviço da história, não o contrário.
    - Identifique o **convidado** (quem vive a experiência), o **anfitrião** (quem entrega) e o **momento da verdade**.
    - Antes, leia CLAUDE.md/README do projeto atual, se houver, e ancore o desafio nele.
    - Se o **convidado** não dá para inferir do pedido nem do projeto (ex.: "vender online" sem dizer o quê nem para quem), faça **uma** pergunta com AskUserQuestion oferecendo 3 perfis prováveis. Qualquer outro contexto que falte (país, orçamento), assuma, declare em uma linha e siga.
@@ -44,7 +45,8 @@ Subagentes não veem a conversa, a skill nem uns aos outros: tudo que precisam v
    - Proibido descartar nesta fase.
 
 4. **Shortlist (você)**
-   - Dê nota 1–5 às ideias nos critérios de references/horizontes.md: Encantamento, Diferenciação, Dor resolvida, Viabilidade. Some.
+   - Porta de entrada: o **teste do coração** (references/tecnicas.md da skill) — conte cada ideia em UMA frase; se não emociona nem intriga, não entra. Anote quais caíram aqui.
+   - Às sobreviventes, dê nota 1–5 às ideias nos critérios de references/horizontes.md: Encantamento, Diferenciação, Dor resolvida, Viabilidade. Some.
    - Leve as 3–5 de maior soma (3 em `--quick`). Se nenhuma tiver Encantamento 5, troque a última pela de maior Encantamento — o filtro não pode matar a ousadia.
    - Mostre a tabela no brief, com uma linha dizendo por que cada uma foi escolhida.
 
@@ -57,11 +59,12 @@ Subagentes não veem a conversa, a skill nem uns aos outros: tudo que precisam v
    - Rodadas por conceito: encantamento, atrito zero, ousadia (só a primeira em `--quick`).
 
 7. **Veto do convidado** → subagente `guest-advocate` (segunda passada)
-   - **Passe:** as versões plussed e os 10 princípios de references/principios.md, em especial "Encantar, nunca manipular".
+   - **Passe:** as versões plussed e os fundamentos e os Dez Mandamentos de references/principios.md, em especial "Encantar, nunca manipular".
    - O plussing é onde entram urgência falsa, escassez inventada, gamificação compulsiva, coleta de dado sem necessidade. Cada item vetado volta com a correção, e a correção substitui o plus original.
 
 8. **Engenharia de viabilidade** → subagente `show-engineer`
    - **Passe:** os conceitos já vetados/corrigidos, os critérios H1/H2/H3 de references/horizontes.md (o agente não enxerga a pasta da skill), o país e o setor.
+   - Respostas no formato **"Sim, se…"**: nenhum obstáculo volta como "não dá", só como condição com custo.
    - Possível hoje / em 2 anos / em 5 anos. Custo relativo, riscos (técnicos, legais, éticos), MVP de menor custo.
    - Todo conceito H2 ou H3 sai com um **embrião H1**: um pedaço testável hoje.
 

@@ -28,3 +28,12 @@ Antes de construir, simule. Exemplos: um WhatsApp manual fingindo ser IA ("Mági
 
 ## Pre-mortem
 "É 2028 e o conceito fracassou. Por quê?" Liste 5 razões e transforme cada uma num plus ou num experimento.
+
+## Teste do coração
+Conte o conceito em UMA frase para alguém de fora. Se os olhos da pessoa não mudarem, ainda não há história — há mecanismo. ("Uma mansão onde 999 fantasmas felizes procuram o milésimo morador" passa; "dark ride com projeções e trilho" não.)
+
+## "Sim, se…"
+Proibido "não dá". Todo obstáculo vira condição: "sim, se [tecnologia X / parceiro Y / cortar Z]", com custo. A condição mais barata vira o embrião H1.
+
+## O convidado é a câmera
+Percorra a experiência em primeira pessoa, no presente: o que vejo da entrada? o que ouço? para onde olho primeiro (weenie)? onde hesito? A planta vem depois do travelling.
