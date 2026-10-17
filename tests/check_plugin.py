@@ -73,6 +73,14 @@ def main():
     assert "Resultado" in (SKILL / "references/ideas-format.md").read_text()
     assert (ROOT / "LICENSE").exists(), "plugin.json says MIT but LICENSE missing"
     assert not (ROOT / "templates").exists(), "stale templates/ dir"
+
+    # /spark: one concept, fast, no subagents — but never skips the veto or the memory.
+    spark = ROOT / "commands/spark.md"
+    assert spark.exists(), "/spark missing"
+    fm, body = frontmatter(spark), spark.read_text()
+    assert "Agent" not in fm.get("allowed-tools", ""), "/spark must run without subagents"
+    for must in ("Veto", "ideas.md", "MVP", "--quick"):
+        assert must in body, f"/spark missing {must}"
     check_session_hook()
     print("ok")
 

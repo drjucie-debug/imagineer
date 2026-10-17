@@ -26,6 +26,8 @@ O plugin entrega um **Imagineering Brief** com:
 8. **Horizontes** — H1 (fazer na segunda-feira), H2 (piloto em 6–18 meses), H3 (aposta de futuro).
 9. **Próximos passos** — experimento de menor custo para validar cada conceito.
 
+Para **um** conceito rápido (≈1 min, sem subagentes nem pesquisa): `/imagineer:spark <desafio>` — reenquadra, 8 ideias, escolhe 1, cena, plus, veto e MVP de 2 semanas.
+
 Exemplos: [`examples/moda-online.md`](examples/moda-online.md) (ciclo real de 9 fases, `--quick`, com fontes) e [`examples/vender-carros.md`](examples/vender-carros.md) (ilustrativo, sem pesquisa).
 
 ---
@@ -39,6 +41,7 @@ claude-imagineer/
 │   └── marketplace.json              # marketplace de um plugin só
 ├── commands/                         # comandos de barra
 │   ├── imagine.md                    # /imagine  — ciclo completo
+│   ├── spark.md                      # /spark    — 1 conceito rápido, sem subagentes
 │   ├── blue-sky.md                   # /blue-sky — só a explosão de ideias
 │   ├── plus.md                       # /plus     — melhora uma ideia existente
 │   ├── story.md                      # /story    — transforma ideia em narrativa
