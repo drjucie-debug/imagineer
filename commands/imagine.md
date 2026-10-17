@@ -76,6 +76,8 @@ Subagentes não veem a conversa, a skill nem uns aos outros: tudo que precisam v
    - Antes de mostrar, confira references/checklist.md item a item. Corrija o que falhar; não entregue com item falho sem dizer qual e por quê.
    - **Duas camadas:** quando gravar em `.imagineer/`, a conversa mostra só o cartão-postal, cada conceito em 1 linha, os experimentos e o fantasma 1000; o brief completo vai para o arquivo. Sem gravação, mostre o brief inteiro.
    - Registre o **fantasma 1000** em ideas.md com status `vaga`.
+   - **Página:** se a ferramenta Artifact estiver disponível na sessão, ofereça publicar o brief como página privada — capa = cartão-postal, conceitos como cards, mapa de horizontes visual. Carregue antes a skill de design de artifacts do host, se existir.
+   - **Esboço em imagem:** se houver ferramenta de geração de imagem na sessão, ofereça gerar a imagem do esboço do cartão-postal.
    - Feche com **um** "próximo brinquedo": o comando mais útil agora (ex.: `/imagineer:plus <conceito escolhido>`).
 
 ## Regras

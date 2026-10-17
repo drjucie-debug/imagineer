@@ -64,4 +64,4 @@ Linha: `| <data> | <nome> | briefs/<arquivo> | <H> | sonho | | |` (sem `|` dentr
 **Fantasma 1000:** {{pergunta em aberto — status `vaga` no ideas.md}}
 ```
 
-Sem pesquisa, não cite números de mercado; se um dado for essencial, diga qual e sugira `/imagineer:future-scan`.
+Se houver ferramenta de geração de imagem na sessão, ofereça gerar o esboço do conceito. Sem pesquisa, não cite números de mercado; se um dado for essencial, diga qual e sugira `/imagineer:future-scan`.

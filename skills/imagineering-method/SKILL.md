@@ -84,6 +84,7 @@ Use `references/brief-template.md`. Mantenha:
 - Fontes no fim.
 - Fechamento com experimentos de 2 semanas.
 - Antes de entregar, confira `references/checklist.md`.
+- Com a ferramenta Artifact disponível, ofereça o brief como página publicada (capa = cartão-postal); `/board` publica o quadro de ideias e `/pitch` vende um conceito em 7 quadros.
 
 ## Memória do projeto
 

@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.7.0 — 2026-10-17
+- **Formas de entrega:** o brief pode virar página publicada (capa = cartão-postal, conceitos como cards); `/board` publica o quadro de ideias como página interativa com votos e movimentos entre horizontes; `/pitch` transforma um conceito em roteiro de 7 quadros (máx. 20 palavras por quadro); o esboço do cartão-postal pode virar imagem gerada. Tudo condicional às ferramentas da sessão, com fallback em markdown.
+
 ## 0.6.0 — 2026-10-17
 - **Cartão-postal:** o brief abre com a história em 1 frase, a cena mais forte e um prompt de esboço à la Herb Ryman; no modo criação, cada ficha ganha "silhueta em 3 traços".
 - **Etiqueta `[memória]`:** fato sem fonte lida não entra no sumário nem no cartão-postal.

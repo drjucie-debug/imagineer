@@ -121,6 +121,17 @@ def main():
     assert "mapa do parque" in imagine and "Duas camadas" in imagine and "próximo brinquedo" in imagine
     ideas_fmt = (SKILL / "references/ideas-format.md").read_text()
     assert "Teste até" in ideas_fmt and "vaga" in ideas_fmt
+    # v0.7: delivery forms — published page, board, pitch, sketch image; all degrade to markdown.
+    board = (ROOT / "commands/board.md").read_text()
+    for must in ("ideas.md", "H1", "db", "MESMO url"):
+        assert must in board, f"board.md missing {must}"
+    pitch = (ROOT / "commands/pitch.md").read_text()
+    for must in ("Weenie", "Sim, se", "20 palavras"):
+        assert must in pitch, f"pitch.md missing {must}"
+    assert "Artifact" in imagine and "imagem" in imagine, "imagine.md missing page/image delivery"
+    for f in (board, pitch, imagine):
+        assert "se" in f  # delivery must stay conditional; hard requirement is the markdown fallback
+
     for d in ("criacao-entrega-fichas", "historia-primeiro", "sim-se"):
         assert (ROOT / "evals" / d / "prompt.md").exists(), f"eval case {d} missing"
         assert list((ROOT / "evals" / d / "graders").glob("*.md")), f"eval {d} has no graders"

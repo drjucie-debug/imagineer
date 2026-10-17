@@ -49,7 +49,9 @@ imagineer/
 │   ├── story.md                      # /story    — transforma ideia em narrativa
 │   ├── guest-journey.md              # /guest-journey — mapa da experiência
 │   ├── future-scan.md                # /future-scan — sinais e tendências
-│   └── ideas.md                      # /ideas — status e resultados das ideias
+│   ├── ideas.md                      # /ideas — status e resultados das ideias
+│   ├── board.md                      # /board — quadro de ideias como página interativa
+│   └── pitch.md                      # /pitch — roteiro de 7 quadros para vender um conceito
 ├── hooks/
 │   ├── hooks.json                    # SessionStart
 │   └── session-start.sh              # resume .imagineer/ideas.md na sessão
@@ -151,12 +153,13 @@ claude plugin update imagineer@imagineer
 
 - **v0.1** — comandos, agentes, skill, template e exemplo.
 - **v0.2** — memória de ideias por projeto (`.imagineer/ideas.md` + `briefs/`); hook `SessionStart` que injeta o resumo dessa memória (silencioso em projetos sem `.imagineer/`); `/imagine` lê CLAUDE.md/README do projeto e pergunta quem é o convidado quando o pedido é vago.
-- **v0.6** (atual) — cartão-postal com esboço no topo do brief, etiqueta [memória], entrega em duas camadas, mapa do parque, kit de segunda-feira, cobrança de experimento vencido (Teste até), fantasma 1000 e suíte de evals comportamental (`claude plugin eval`).
+- **v0.7** (atual) — formas de entrega: brief como página publicada, `/board` (Blue Sky Board com votos — antecipa o v1.0), `/pitch` em 7 quadros e esboço do cartão-postal em imagem; tudo degrada para markdown quando a sessão não tem as ferramentas.
+- **v0.6** — cartão-postal com esboço no topo do brief, etiqueta [memória], entrega em duas camadas, mapa do parque, kit de segunda-feira, cobrança de experimento vencido (Teste até), fantasma 1000 e suíte de evals comportamental (`claude plugin eval`).
 - **v0.5** — motor refundado no método real da WDI: a história primeiro, teste do coração, "Sim, se…", Dez Mandamentos de Mickey no checklist (fontes em `skills/imagineering-method/references/principios.md`).
 - **v0.4** — modo criação: pedidos de *coisas* (criaturas, personagens, produtos, nomes) entregam as coisas com ficha, em vez de estratégia; regra "nunca troque o entregável"; `/spark` para um conceito rápido.
 - **v0.3** — shortlist com nota, veto pós-plussing, checklist de qualidade, fontes etiquetadas; `/ideas` para status e resultado de experimentos (cobre o "Idea Vault" sem servidor MCP — servidor só se houver várias pessoas votando).
-- **v0.7** — modo "Imagineer contínuo": tarefa agendada semanal que varre sinais do futuro de cada projeto ativo e envia um "postcard do futuro".
-- **v1.0** — artifact interativo de quadro (Blue Sky board) com arrastar ideias entre horizontes.
+- **v0.8** — modo "Imagineer contínuo": tarefa agendada semanal que varre sinais do futuro de cada projeto ativo e envia um "postcard do futuro".
+- **v1.0** — polimento pós-uso real; candidato a marketplace.
 
 ## O nome
 
