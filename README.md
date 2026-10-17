@@ -110,7 +110,7 @@ No Claude Code, os agentes rodam como subagentes (em paralelo quando independent
 ## Instalação (Claude Code)
 
 ```bash
-git clone https://github.com/SEU-USUARIO/imagineer
+git clone https://github.com/drjucie-debug/imagineer
 # a pasta do plugin já é um marketplace
 /plugin marketplace add ./imagineer
 /plugin install imagineer@imagineer
