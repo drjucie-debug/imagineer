@@ -128,6 +128,14 @@ Exemplo: `/imagine --quick --ideas 30 novas formas de vender carros`
 
 ```bash
 python3 tests/check_plugin.py   # imprime "ok" se a estrutura está íntegra
+claude plugin validate .
+```
+
+O Claude Code instala uma **cópia** do plugin em `~/.claude/plugins/cache/`. Depois de editar (e subir a `version` no plugin.json), atualize e abra uma sessão nova:
+
+```bash
+claude plugin marketplace update imagineer
+claude plugin update imagineer@imagineer
 ```
 
 ## Roadmap
