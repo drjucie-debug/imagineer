@@ -1,0 +1,8 @@
+name: checks
+on: [push, pull_request]
+jobs:
+  structural:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 tests/check_plugin.py

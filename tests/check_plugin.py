@@ -99,6 +99,16 @@ def main():
     assert "Sim, se" in (ROOT / "agents/show-engineer.md").read_text(), "engineer must answer 'Sim, se'"
     assert "Dez Mandamentos" in (SKILL / "references/checklist.md").read_text()
 
+    # GitHub-ready packaging.
+    for f in (".gitignore", "CHANGELOG.md", ".github/workflows/test.yml",
+              "examples/novos-pokemons.md", "examples/moda-online.md"):
+        assert (ROOT / f).exists(), f"missing {f}"
+    assert not (ROOT / "examples/vender-carros.md").exists(), "old-engine example must go"
+    readme = (ROOT / "README.md").read_text()
+    assert "afiliado" in readme, "trademark/affiliation disclaimer missing"
+    assert "A história primeiro" in readme, "README still describes the old engine"
+    assert "vender-carros" not in readme and "Downloads/claude-imagineer" not in readme
+
     # Creation requests ("imagine novos pokémons") must get the things themselves, not a strategy.
     assert (SKILL / "references/creation-template.md").exists(), "no template for creation mode"
     for f in [SKILL / "SKILL.md", ROOT / "commands/imagine.md", spark,

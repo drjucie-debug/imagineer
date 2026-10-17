@@ -1,8 +1,8 @@
-# Claude Imagineer
+# Imagineer
 
 > "É meio divertido fazer o impossível." — princípio que guia o plugin
 
-**Claude Imagineer** é um plugin para Claude e Claude Code que pensa *à frente* de qualquer projeto. Em vez de responder "como fazer X um pouco melhor", ele responde "como seria X se fosse projetado hoje do zero, como uma experiência inesquecível — e qual o caminho de engenharia para chegar lá".
+**Imagineer** é um plugin para Claude e Claude Code que pensa *à frente* de qualquer projeto. Em vez de responder "como fazer X um pouco melhor", ele responde "como seria X se fosse projetado hoje do zero, como uma experiência inesquecível — e qual o caminho de engenharia para chegar lá".
 
 O método se inspira na forma de trabalhar dos Imagineers da Disney: misturar sonhadores e engenheiros na mesma sala, começar pela história, projetar a partir do olhar do convidado e nunca considerar uma ideia terminada ("plussing").
 
@@ -11,31 +11,33 @@ O método se inspira na forma de trabalhar dos Imagineers da Disney: misturar so
 ## Exemplo de uso
 
 ```
-/imagine Pesquise novas formas de vender carros
+/imagineer:imagine novas formas de vender carros
 ```
 
 O plugin entrega um **Imagineering Brief** com:
 
-1. **Reenquadramento** — a pergunta real por trás do pedido ("vender carros" → "como alguém passa a confiar e amar o carro que vai ter").
-2. **Varredura do presente e sinais do futuro** — pesquisa web de tendências, casos e sinais fracos.
-3. **Blue Sky** — 20+ ideias sem restrição, inclusive as absurdas.
-4. **Histórias** — as 3–5 melhores viram conceitos com narrativa, personagem e "momento mágico".
-5. **Jornada do Convidado** — antes, durante e depois, com pontos de dor e de encantamento.
-6. **Plussing** — cada conceito passa por 3 rodadas de "e se fosse ainda melhor?".
-7. **Engenharia de viabilidade** — o que é possível hoje, em 2 anos e em 5 anos; custo, risco e MVP.
-8. **Horizontes** — H1 (fazer na segunda-feira), H2 (piloto em 6–18 meses), H3 (aposta de futuro).
-9. **Próximos passos** — experimento de menor custo para validar cada conceito.
+1. **A história primeiro** — uma frase com coração (herói, desejo, transformação, lugar) que comanda o ciclo inteiro.
+2. **Varredura do futuro** — pesquisa web com fontes etiquetadas por tipo ([primária], [fornecedor]…).
+3. **Blue Sky** — 20+ ideias sem restrição, cada uma como cena desenhável.
+4. **Shortlist** — teste do coração na porta + notas; o filtro não mata a ousadia.
+5. **História e jornada** — conceitos com weenie, momento mágico, personas e dores.
+6. **Plussing** — "e se fosse ainda melhor?".
+7. **Veto do convidado** — depois do plussing: urgência falsa, exposição e dark patterns caem, sempre com correção.
+8. **Engenharia "Sim, se…"** — H1/H2/H3, embrião H1 e MVP de 2 semanas; nenhum obstáculo volta como "não dá".
+9. **Entrega** — brief conferido no checklist dos Dez Mandamentos + um experimento por conceito.
+
+Pedido de *coisas* ("imagine novos pokémons", "crie 5 sabores") entra no **modo criação**: o plugin entrega as criações em si, com ficha — nunca uma estratégia sobre elas.
 
 Para **um** conceito rápido (≈1 min, sem subagentes nem pesquisa): `/imagineer:spark <desafio>` — reenquadra, 8 ideias, escolhe 1, cena, plus, veto e MVP de 2 semanas.
 
-Exemplos: [`examples/moda-online.md`](examples/moda-online.md) (ciclo real de 9 fases com subagentes, antes do `--quick` enxuto, com fontes) e [`examples/vender-carros.md`](examples/vender-carros.md) (ilustrativo, sem pesquisa).
+Exemplos reais: [`examples/moda-online.md`](examples/moda-online.md) (modo estratégia, 9 fases com subagentes) e [`examples/novos-pokemons.md`](examples/novos-pokemons.md) (modo criação, 3 criaturas com ficha).
 
 ---
 
 ## Estrutura
 
 ```
-claude-imagineer/
+imagineer/
 ├── .claude-plugin/
 │   ├── plugin.json                   # manifesto
 │   └── marketplace.json              # marketplace de um plugin só
@@ -68,8 +70,9 @@ claude-imagineer/
 │       ├── ideas-format.md           # memória .imagineer/ do projeto
 │       ├── checklist.md              # conferência antes de entregar
 │       └── creation-template.md      # entregável do modo criação
-├── tests/check_plugin.py             # verificação estrutural
-└── examples/                        # moda-online.md (real), vender-carros.md (ilustrativo)
+├── examples/                         # moda-online.md (estratégia), novos-pokemons.md (criação)
+├── tests/check_plugin.py             # verificação estrutural (roda no CI)
+└── CHANGELOG.md
 ```
 
 ## Como o ciclo roda
@@ -107,12 +110,13 @@ No Claude Code, os agentes rodam como subagentes (em paralelo quando independent
 ## Instalação (Claude Code)
 
 ```bash
+git clone https://github.com/SEU-USUARIO/imagineer
 # a pasta do plugin já é um marketplace
-/plugin marketplace add ~/Downloads/claude-imagineer
+/plugin marketplace add ./imagineer
 /plugin install imagineer@imagineer
 
 # ou, para testar durante o desenvolvimento
-claude --plugin-dir ./claude-imagineer
+claude --plugin-dir ./imagineer
 ```
 
 No app Claude, o conteúdo de `skills/imagineering-method` pode ser enviado como skill personalizada.
@@ -152,6 +156,10 @@ claude plugin update imagineer@imagineer
 - **v0.6** — modo "Imagineer contínuo": tarefa agendada semanal que varre sinais do futuro de cada projeto ativo e envia um "postcard do futuro".
 - **v1.0** — artifact interativo de quadro (Blue Sky board) com arrastar ideias entre horizontes.
 
-## Nota sobre nome
+## Marca e afiliação
 
-"Imagineering" é marca registrada da Disney. Para uso interno o nome funciona; se for publicar em marketplace, vale considerar um nome próprio (ex.: *Claude Dreamforge*, *Horizonte*) mantendo o método.
+Projeto independente, **não afiliado, patrocinado nem endossado** pela Disney ou pela Walt Disney Imagineering. "Imagineering" é marca registrada da Disney Enterprises; o método aqui é uma releitura educacional de princípios publicados em fontes públicas, citadas em `skills/imagineering-method/references/principios.md`. Os exemplos de fan design citam as marcas apenas nominativamente e não têm fim comercial. Para distribuição ampla, considere um nome próprio (ex.: *Dreamforge*, *Horizonte*) mantendo o método.
+
+## Licença
+
+[MIT](LICENSE).
