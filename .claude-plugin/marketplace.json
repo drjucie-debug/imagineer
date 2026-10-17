@@ -1,12 +1,13 @@
 {
-  "name": "claude-imagineer",
+  "name": "imagineer",
   "owner": {
     "name": "Juciê",
     "email": "drjucie@gmail.com"
   },
+  "description": "Plugin Imagineer: método dos Imagineers para pensar à frente de qualquer projeto.",
   "plugins": [
     {
-      "name": "claude-imagineer",
+      "name": "imagineer",
       "source": "./",
       "description": "Pensa à frente de qualquer projeto com o método dos Imagineers."
     }

@@ -93,7 +93,7 @@ No Claude Code, os agentes rodam como subagentes (em paralelo quando independent
 ```bash
 # a pasta do plugin já é um marketplace
 /plugin marketplace add ~/Downloads/claude-imagineer
-/plugin install claude-imagineer@claude-imagineer
+/plugin install imagineer@imagineer
 
 # ou, para testar durante o desenvolvimento
 claude --plugin-dir ./claude-imagineer
