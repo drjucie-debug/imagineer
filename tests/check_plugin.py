@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 """Structural check for the plugin. Run: python3 tests/check_plugin.py"""
 import json
+import os
 import re
+import subprocess
+import tempfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -46,7 +49,39 @@ def main():
         for cited in re.findall(r"`([a-z]+(?:-[a-z]+)+)`", c.read_text()):
             assert cited in known, f"{c.name} cites unknown `{cited}`"
     assert frontmatter(SKILL / "SKILL.md")["name"] == "imagineering-method"
+    assert (SKILL / "references/ideas-format.md").exists(), "ideas.md format undocumented"
+    check_session_hook()
     print("ok")
+
+
+def check_session_hook():
+    hooks = json.loads((ROOT / "hooks/hooks.json").read_text())["hooks"]
+    cmd = hooks["SessionStart"][0]["hooks"][0]["command"]
+    script = ROOT / "hooks/session-start.sh"
+    assert cmd == "\"${CLAUDE_PLUGIN_ROOT}/hooks/session-start.sh\"", cmd
+    assert os.access(script, os.X_OK), "session-start.sh not executable"
+
+    def run(project):
+        env = {**os.environ, "CLAUDE_PROJECT_DIR": str(project)}
+        r = subprocess.run([str(script)], env=env, capture_output=True, text=True)
+        assert r.returncode == 0, r.stderr
+        return r.stdout
+
+    with tempfile.TemporaryDirectory() as d:
+        project = Path(d)
+        assert run(project) == "", "hook must be silent without .imagineer/"
+        (project / ".imagineer/briefs").mkdir(parents=True)
+        (project / ".imagineer/briefs/vender-online-2026-10-16.md").write_text("x")
+        (project / ".imagineer/ideas.md").write_text(
+            "# Ideias\n\n| Data | Ideia | Brief | Horizonte | Status |\n|---|---|---|---|---|\n"
+            "| 2026-10-16 | Vendedor em 30s | briefs/vender-online-2026-10-16.md | H1 | testando |\n"
+            "| 2026-10-16 | Vaquinha | briefs/vender-online-2026-10-16.md | H1 | sonho |\n"
+            "| 2026-10-01 | Loja sem site | briefs/x.md | H3 | arquivada |\n")
+        out = run(project)
+        assert "3 ideias" in out, out
+        assert "Vendedor em 30s" in out and "Vaquinha" in out, out
+        assert "Loja sem site" not in out, "archived ideas must not be listed"
+        assert "vender-online-2026-10-16.md" in out, "latest brief missing"
 
 
 if __name__ == "__main__":

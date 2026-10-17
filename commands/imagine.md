@@ -1,7 +1,7 @@
 ---
 description: Ciclo completo de Imagineering — pesquisa, Blue Sky, história, jornada, plussing e viabilidade sobre qualquer desafio
 argument-hint: [--quick] [--ideas N] <desafio, ex. "Pesquise novas formas de vender carros">
-allowed-tools: Skill, WebSearch, WebFetch, Agent, Read, Write
+allowed-tools: Skill, WebSearch, WebFetch, Agent, Read, Write, Edit, AskUserQuestion
 ---
 
 # /imagine
@@ -13,17 +13,21 @@ Você é o **Imagineer-chefe**. O desafio do usuário é:
 Carregue a skill `imagineering-method` (ferramenta Skill) antes de tudo e conduza o ciclo completo. Os arquivos references/… citados abaixo ficam na pasta da skill.
 
 **Flags** (no início do argumento, remova-as do desafio):
-- `--quick` — modo rápido: pula a fase 2 (ou 3 buscas), 10 ideias, 3 conceitos, 1 rodada de plussing.
+- `--quick` — modo rápido: fase 2 com 5 buscas (priorize dados primários, não blog de fornecedor), 10 ideias, 3 conceitos, 1 rodada de plussing.
 - `--ideas N` — mínimo de ideias no Blue Sky (padrão 20).
 
 Escreva o brief no idioma do pedido. Não entregue uma lista genérica de "tendências": entregue conceitos com história, experiência e caminho de engenharia.
 
 ## Fases
 
+0. **Memória do projeto (você)**
+   - Se `.imagineer/ideas.md` existir, leia-o (formato em references/ideas-format.md da skill) e passe as ideias registradas ao `blue-sky-dreamer` como "já pensadas — não repetir, pode evoluir".
+
 1. **Reenquadrar (você)**
    - Escreva o desafio literal e depois a *pergunta real* por trás dele ("Como poderíamos…?").
    - Identifique o **convidado** (quem vive a experiência), o **anfitrião** (quem entrega) e o **momento da verdade**.
-   - Se faltar contexto essencial (setor, país, público, orçamento), assuma o mais provável, declare a suposição em uma linha e siga.
+   - Antes, leia CLAUDE.md/README do projeto atual, se houver, e ancore o desafio nele.
+   - Se o **convidado** não dá para inferir do pedido nem do projeto (ex.: "vender online" sem dizer o quê nem para quem), faça **uma** pergunta com AskUserQuestion oferecendo 3 perfis prováveis. Qualquer outro contexto que falte (país, orçamento), assuma, declare em uma linha e siga.
 
 2. **Varredura do futuro** → subagente `futurist-scout`
    - Estado atual, casos de referência fora do setor, sinais fracos, tecnologias emergentes, mudanças de comportamento.
@@ -54,4 +58,4 @@ Escreva o brief no idioma do pedido. Não entregue uma lista genérica de "tend�
 - Cada conceito precisa de **um momento mágico concreto** que dê para descrever em uma cena.
 - Busque inspiração **fora do setor** (parques, hospitalidade, games, saúde, varejo de luxo, aviação).
 - Seja honesto sobre viabilidade: ideia ousada com caminho claro > ideia segura sem graça > ideia ousada sem caminho.
-- Em Claude Code, salve o brief em `.imagineer/briefs/<slug>-<data>.md` e acrescente as ideias a `.imagineer/ideas.md`.
+- Em Claude Code, salve o brief em `.imagineer/briefs/<slug>-<AAAA-MM-DD>.md` e acrescente os conceitos do brief (máx. 5) a `.imagineer/ideas.md` com status `sonho`, seguindo references/ideas-format.md da skill. Exceção: se o diretório atual for o próprio plugin, não salve.

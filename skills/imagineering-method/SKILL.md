@@ -57,8 +57,12 @@ Use `references/brief-template.md`. Mantenha:
 - Fontes no fim.
 - Fechamento com experimentos de 2 semanas.
 
+## Memória do projeto
+
+Ver `references/ideas-format.md`. Leia `.imagineer/ideas.md` antes de gerar ideias e registre os conceitos ao final de cada ciclo.
+
 ## Calibragem
 
-- Pedido curto ou flag `--quick`: pule a fase 2 (ou faça 3 buscas), 10 ideias, 3 conceitos, 1 rodada de plussing.
+- Pedido curto ou flag `--quick`: fase 2 com 5 buscas, 10 ideias, 3 conceitos, 1 rodada de plussing.
 - Pedido amplo ("o futuro do varejo"): faça a fase 2 completa e 5 conceitos.
 - Se o usuário tem um projeto em andamento (CLAUDE.md, README, arquivos), leia antes e ancore os conceitos nele.

@@ -1,12 +1,14 @@
 ---
 description: Explosão de ideias sem limites (fase Blue Sky) — nada é descartado
 argument-hint: <tema>
-allowed-tools: Agent, WebSearch
+allowed-tools: Agent, WebSearch, Read
 ---
 
 # /blue-sky
 
 Rode apenas a fase Blue Sky para: **$ARGUMENTS**
+
+Se `.imagineer/ideas.md` existir, leia-o e passe as ideias ao `blue-sky-dreamer` como "já pensadas — não repetir, pode evoluir".
 
 Use o subagente `blue-sky-dreamer`. Entregue:
 

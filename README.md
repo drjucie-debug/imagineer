@@ -44,6 +44,9 @@ claude-imagineer/
 │   ├── story.md                      # /story    — transforma ideia em narrativa
 │   ├── guest-journey.md              # /guest-journey — mapa da experiência
 │   └── future-scan.md                # /future-scan — sinais e tendências
+├── hooks/
+│   ├── hooks.json                    # SessionStart
+│   └── session-start.sh              # resume .imagineer/ideas.md na sessão
 ├── agents/                           # a "sala de Imagineering"
 │   ├── futurist-scout.md             # pesquisa sinais do futuro
 │   ├── blue-sky-dreamer.md           # ideação sem limites
@@ -57,7 +60,8 @@ claude-imagineer/
 │       ├── principios.md             # os princípios de Imagineering
 │       ├── tecnicas.md               # técnicas de ideação e plussing
 │       ├── horizontes.md             # modelo H1/H2/H3 e critérios
-│       └── brief-template.md         # formato do entregável
+│       ├── brief-template.md         # formato do entregável
+│       └── ideas-format.md           # memória .imagineer/ do projeto
 ├── tests/check_plugin.py             # verificação estrutural
 └── examples/vender-carros.md         # exemplo completo
 ```
@@ -120,8 +124,8 @@ python3 tests/check_plugin.py   # imprime "ok" se a estrutura está íntegra
 
 ## Roadmap
 
-- **v0.1** (este esboço) — comandos, agentes, skill, template e exemplo.
-- **v0.2** — hook `SessionStart` que lê o `CLAUDE.md` do projeto e oferece um "/imagine" focado nele; memória de ideias por projeto (`.imagineer/ideas.md`).
+- **v0.1** — comandos, agentes, skill, template e exemplo.
+- **v0.2** (atual) — memória de ideias por projeto (`.imagineer/ideas.md` + `briefs/`); hook `SessionStart` que injeta o resumo dessa memória (silencioso em projetos sem `.imagineer/`); `/imagine` lê CLAUDE.md/README do projeto e pergunta quem é o convidado quando o pedido é vago.
 - **v0.3** — servidor MCP "Idea Vault" com busca de ideias anteriores, votação e status (sonho → piloto → lançado).
 - **v0.4** — modo "Imagineer contínuo": tarefa agendada semanal que varre sinais do futuro de cada projeto ativo e envia um "postcard do futuro".
 - **v1.0** — artifact interativo de quadro (Blue Sky board) com arrastar ideias entre horizontes.

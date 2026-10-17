@@ -1,0 +1,25 @@
+#!/bin/sh
+# Injects the project's idea memory into the session. Silent when the project has none.
+dir="${CLAUDE_PROJECT_DIR:-$PWD}/.imagineer"
+[ -f "$dir/ideas.md" ] || exit 0
+
+latest=$(ls -t "$dir"/briefs/*.md 2>/dev/null | head -1)
+
+awk -F'|' -v latest="${latest#"${CLAUDE_PROJECT_DIR:-$PWD}/"}" '
+  function trim(s) { gsub(/^[ \t]+|[ \t]+$/, "", s); return s }
+  /^\|/ {
+    idea = trim($3); status = trim($6)
+    if (idea == "" || idea == "Ideia" || idea ~ /^-+$/) next
+    total++; by[status]++
+    if (status != "arquivada") active[++n] = "- " idea " (" trim($5) ", " status ")"
+  }
+  END {
+    if (!total) exit
+    sep = ""; for (s in by) { counts = counts sep by[s] " " s; sep = ", " }
+    printf "[imagineer] Este projeto tem memória de Imagineering em .imagineer/: %d ideias (%s).\n", total, counts
+    if (latest != "") print "Último brief: " latest
+    if (n) print "Ideias ativas mais recentes:"
+    for (i = n; i > 0 && i > n - 5; i--) print active[i]
+    print "Use como ponto de partida quando o assunto for ideias ou inovação, e não repita ideias já registradas."
+  }
+' "$dir/ideas.md"
