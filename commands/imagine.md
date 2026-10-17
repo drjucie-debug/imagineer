@@ -23,7 +23,9 @@ Escreva o brief no idioma do pedido. Não entregue uma lista genérica de "tend�
 0. **Memória do projeto (você)**
    - Se `.imagineer/ideas.md` existir, leia-o (formato em references/ideas-format.md da skill) e passe as ideias registradas ao `blue-sky-dreamer` como "já pensadas — não repetir, pode evoluir".
 
-1. **Reenquadrar (você)**
+1. **Modo (você)** — leia "Dois modos" na skill. **Modo criação** se o pedido pede coisas (criaturas, personagens, produtos, nomes, histórias); **modo estratégia** se pede como (vender, reinventar, crescer). Nunca troque o entregável. No modo criação, cada fase abaixo segue a variante da skill e a entrega usa references/creation-template.md; avise cada subagente: "MODO CRIAÇÃO — o entregável são as criações em si".
+
+1b. **Reenquadrar (você)**
    - Escreva o desafio literal e depois a *pergunta real* por trás dele ("Como poderíamos…?").
    - Identifique o **convidado** (quem vive a experiência), o **anfitrião** (quem entrega) e o **momento da verdade**.
    - Antes, leia CLAUDE.md/README do projeto atual, se houver, e ancore o desafio nele.
@@ -64,7 +66,7 @@ Subagentes não veem a conversa, a skill nem uns aos outros: tudo que precisam v
    - Todo conceito H2 ou H3 sai com um **embrião H1**: um pedaço testável hoje.
 
 9. **Entrega**
-   - Monte o resultado no formato de references/brief-template.md da skill.
+   - Monte o resultado no formato de references/brief-template.md (modo estratégia) ou references/creation-template.md (modo criação) da skill.
    - Termine com **um experimento de validação por conceito** que caiba em 2 semanas.
    - Antes de mostrar, confira references/checklist.md item a item. Corrija o que falhar; não entregue com item falho sem dizer qual e por quê.
 

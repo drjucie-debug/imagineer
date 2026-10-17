@@ -81,6 +81,14 @@ def main():
     assert "Agent" not in fm.get("allowed-tools", ""), "/spark must run without subagents"
     for must in ("Veto", "ideas.md", "MVP", "--quick"):
         assert must in body, f"/spark missing {must}"
+
+    # Creation requests ("imagine novos pokémons") must get the things themselves, not a strategy.
+    assert (SKILL / "references/creation-template.md").exists(), "no template for creation mode"
+    for f in [SKILL / "SKILL.md", ROOT / "commands/imagine.md", spark,
+              ROOT / "agents/blue-sky-dreamer.md", ROOT / "agents/story-architect.md"]:
+        assert "Modo criação" in f.read_text(), f"{f.name}: creation mode missing"
+    assert "nunca troque o entregável" in (SKILL / "SKILL.md").read_text().lower()
+    assert "Entregável" in (SKILL / "references/checklist.md").read_text()
     check_session_hook()
     print("ok")
 

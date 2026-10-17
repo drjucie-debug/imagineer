@@ -35,6 +35,27 @@ Este método transforma um pedido vago ("pesquise novas formas de vender carros"
 - **engineer:** conceitos corrigidos + `references/horizontes.md`, país e setor.
 **No app Claude (sem subagentes):** interprete cada papel em sequência, marcando claramente a fase. Use pesquisa web na fase 2.
 
+## Dois modos — decida na fase 1
+
+**Regra de ouro: nunca troque o entregável.** Reenquadrar amplia o pedido, não o substitui. Se pediram coisas, entregue as coisas; a "pergunta real" entra como lente para elas ficarem melhores.
+
+| Modo | Sinal no pedido | Entregável |
+|---|---|---|
+| **Modo criação** | pede *coisas*: criaturas, personagens, produtos, nomes, histórias, cardápio, mundos ("imagine novos pokémons", "crie 5 sabores") | as próprias criações, com ficha — `references/creation-template.md` |
+| **Modo estratégia** | pede *como*: vender, reinventar, crescer, o futuro de um setor | conceitos de experiência com caminho — `references/brief-template.md` |
+
+Ambíguo? Pergunte numa linha. Os dois juntos ("novos sabores e como vendê-los")? Criação primeiro; estratégia vira a seção final.
+
+**No modo criação, as fases mudam de função:**
+- Reenquadrar: o que torna uma criação desse tipo inesquecível (critérios de bom design), para quem, e as regras do universo (cânone, tipos, estilo).
+- Pesquisa: o que já existe (para não repetir), lacunas do universo, inspiração de fora (biologia, folclore, arquitetura, culinária…).
+- Blue Sky: cada ideia é **a criação em si** — nome + o que é numa linha.
+- Shortlist: Encantamento, Originalidade (≠ existentes), Coerência (respeita as regras do universo), Potencial (história, evolução, variações).
+- História: uma **ficha** por criação (aparência, comportamento, origem, momento em que alguém a encontra).
+- Plussing: no design da criação.
+- Veto: ofensa, estereótipo cultural, adequação ao público (ex.: criança), semelhança com algo existente.
+- Engenharia: vira **"Como tornar real"** curto — protótipo (esboço, mock, receita), e direitos/IP quando o universo é de terceiros (criação de fã ≠ uso comercial).
+
 ## Princípios inegociáveis
 
 Leia `references/principios.md`. Resumo:

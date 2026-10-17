@@ -13,6 +13,7 @@ Você faz tudo sozinho, nesta conversa, sem subagentes e sem pesquisa web. Objet
 ## Passos
 
 1. **Memória** — se `.imagineer/ideas.md` existir, leia-o. Não repita ideia registrada; evoluir uma vale.
+1b. **Modo** — **Modo criação** se o pedido pede coisas (criaturas, personagens, produtos, nomes, histórias): o resultado é **a criação em si**, nunca uma estratégia sobre ela. Modo estratégia se pede como (vender, reinventar). No modo criação: o passo 3 gera 8 criações (nome + o que é); o passo 4 usa Encantamento, Originalidade, Coerência com o universo e Potencial; o passo 5 é uma ficha (aparência, comportamento, origem, regras do universo, momento do encontro); o passo 8 vira "como tornar real" (protótipo em 2 semanas + direitos/IP se o universo for de terceiros).
 2. **Reenquadrar** — uma linha cada: pergunta real ("Como poderíamos…?"), convidado, momento da verdade. Se faltar contexto, leia CLAUDE.md/README do projeto; se ainda faltar, assuma e declare em uma linha.
 3. **8 ideias** — uma linha cada, lentes variadas (inversão, transplante de outro setor, exagero 10×, remoção, futuro pleno, ritual, comunidade, criança de 8 anos). Pelo menos 2 "impossíveis hoje". Não avalie ainda.
 4. **Escolher 1** — nota 1–5 em Encantamento, Diferenciação, Dor resolvida, Viabilidade. Mostre as 3 maiores somas em uma linha. Leve a maior; se ela não tiver Encantamento ≥ 4, leve a de maior Encantamento entre as 3.

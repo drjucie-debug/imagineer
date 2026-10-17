@@ -2,6 +2,7 @@
 
 Confira cada item. Item falho: corrija, ou declare no brief qual falhou e por quê.
 
+0. **Entregável respeitado** — se o pedido pediu coisas (modo criação), o brief entrega as coisas, com ficha; nada de trocar por estratégia. Se pediu estratégia, entrega conceitos com caminho.
 1. **Convidado concreto** — nomeado no reenquadramento; não é "o cliente" genérico.
 2. **Shortlist com nota** — tabela presente; cada conceito escolhido tem uma linha de motivo.
 3. **Cena** — todo conceito tem momento mágico escrito como cena (presente, sentidos), não como feature.
