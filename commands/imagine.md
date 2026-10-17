@@ -10,6 +10,8 @@ Você é o **Imagineer-chefe**. O desafio do usuário é:
 
 > $ARGUMENTS
 
+Desafio vazio? Mostre o **mapa do parque** e pare: `/imagineer:spark <desafio>` (1 conceito, ~1 min) · `/imagineer:imagine --quick <desafio>` (3 conceitos com pesquisa) · `/imagineer:imagine <desafio>` (a sala inteira) · `/imagineer:ideas` (memória do projeto).
+
 Carregue a skill `imagineering-method` (ferramenta Skill) antes de tudo e conduza o ciclo completo. Os arquivos references/… citados abaixo ficam na pasta da skill.
 
 **Flags** (no início do argumento, remova-as do desafio):
@@ -72,6 +74,9 @@ Subagentes não veem a conversa, a skill nem uns aos outros: tudo que precisam v
    - Monte o resultado no formato de references/brief-template.md (modo estratégia) ou references/creation-template.md (modo criação) da skill.
    - Termine com **um experimento de validação por conceito** que caiba em 2 semanas.
    - Antes de mostrar, confira references/checklist.md item a item. Corrija o que falhar; não entregue com item falho sem dizer qual e por quê.
+   - **Duas camadas:** quando gravar em `.imagineer/`, a conversa mostra só o cartão-postal, cada conceito em 1 linha, os experimentos e o fantasma 1000; o brief completo vai para o arquivo. Sem gravação, mostre o brief inteiro.
+   - Registre o **fantasma 1000** em ideas.md com status `vaga`.
+   - Feche com **um** "próximo brinquedo": o comando mais útil agora (ex.: `/imagineer:plus <conceito escolhido>`).
 
 ## Regras
 

@@ -7,6 +7,13 @@
 
 ---
 
+## Cartão-postal
+> {{a criação favorita em 1 frase}}
+>
+> {{o momento do encontro dela — 4 linhas, no presente}}
+
+**Esboço (à la Herb Ryman):** {{prompt de imagem pronto para um gerador}}
+
 ## Sumário
 {{as criações em uma linha cada + a favorita e por quê}}
 
@@ -25,6 +32,8 @@
 ### {{Nome}}
 - **Em uma linha:**
 - **Aparência:** {{silhueta, cores, tamanho, o traço que se reconhece de longe}}
+- **Silhueta em 3 traços:** {{o contorno que se reconhece todo em preto — Mandamento 5}}
+- **Esboço (prompt):** {{descrição pronta para um gerador de imagem}}
 - **Comportamento / como funciona:**
 - **Origem / inspiração:**
 - **Regras do universo:** {{ex.: tipo, evolução, ingredientes, poderes — o que o universo exige}}
@@ -40,6 +49,9 @@
 - **Protótipo em 2 semanas:** {{esboço, mock, receita-teste, fan art, playtest}}
 - **Teste com o público:** {{com quem, quantos, o que medir}}
 - **Direitos / IP:** {{universo próprio ou de terceiros; o que pode e o que não pode}}
+
+## O fantasma 1000
+{{a pergunta em aberto que só você sabe responder — vai para ideas.md com status `vaga`}}
 
 ## Fontes
 - {{[tipo] [Título](URL)}}

@@ -26,11 +26,11 @@ Você faz tudo sozinho, nesta conversa, sem subagentes e sem pesquisa web. Objet
 ```
 # Ideias — <nome do projeto>
 
-| Data | Ideia | Brief | Horizonte | Status | Resultado |
-|---|---|---|---|---|---|
+| Data | Ideia | Brief | Horizonte | Status | Resultado | Teste até |
+|---|---|---|---|---|---|---|
 ```
 
-Linha: `| <data> | <nome> | briefs/<arquivo> | <H> | sonho | |` (sem `|` dentro das células).
+Linha: `| <data> | <nome> | briefs/<arquivo> | <H> | sonho | | |` (sem `|` dentro das células).
 
 ## Formato da resposta
 
@@ -46,6 +46,7 @@ Linha: `| <data> | <nome> | briefs/<arquivo> | <H> | sonho | |` (sem `|` dentro 
 **Veto:** …
 **Horizonte:** … · **Embrião H1:** …
 **MVP 2 semanas:** … · **Métrica:** … · **Vale continuar se:** …
+**Fantasma 1000:** {{pergunta que só o usuário sabe responder — registre em ideas.md com status `vaga`}}
 ```
 
 **Modo criação** — use este formato no lugar do acima (sem Horizonte, MVP nem Embrião):
@@ -60,6 +61,7 @@ Linha: `| <data> | <nome> | briefs/<arquivo> | <H> | sonho | |` (sem `|` dentro 
 **Plus:** …
 **Veto:** …
 **Como tornar real:** protótipo em 2 semanas · teste com quem · direitos/IP
+**Fantasma 1000:** {{pergunta em aberto — status `vaga` no ideas.md}}
 ```
 
 Sem pesquisa, não cite números de mercado; se um dado for essencial, diga qual e sugira `/imagineer:future-scan`.

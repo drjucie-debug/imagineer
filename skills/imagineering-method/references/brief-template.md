@@ -6,6 +6,13 @@
 
 ---
 
+## Cartão-postal
+> {{a história em 1 frase com coração}}
+>
+> {{o momento mágico do conceito mais forte — 4 linhas, no presente}}
+
+**Esboço (à la Herb Ryman):** {{prompt de imagem pronto para colar num gerador: cena, enquadramento, luz, estilo}}
+
 ## Sumário executivo
 {{5 linhas: a pergunta real, os conceitos mais fortes, o que fazer primeiro}}
 
@@ -41,6 +48,7 @@
 - **Horizonte:** H1 | H2 | H3
 - **Embrião H1:** {{para H2/H3: o pedaço testável hoje; para H1: "—"}}
 - **MVP em 2 semanas:**
+- **Kit de segunda-feira:** {{a peça pronta do teste — roteiro de 5 perguntas, texto da landing ou mensagem de WhatsApp}}
 - **Métrica:**
 
 {{repetir para B, C…}}
@@ -56,5 +64,8 @@
 ## 7. Pre-mortem
 {{5 razões pelas quais isso pode falhar e o plus para cada uma}}
 
+## O fantasma 1000
+{{a Haunted Mansion tem 999 fantasmas e "sempre cabe mais um": uma pergunta que só você sabe responder — vai para ideas.md com status `vaga` e é a semente do próximo /spark}}
+
 ## Fontes
-- {{[tipo] [Título](URL)}} — tipos: [primária] [empresa sobre si] [fornecedor] [imprensa] [estimativa]
+- {{[tipo] [Título](URL)}} — tipos: [primária] [empresa sobre si] [fornecedor] [imprensa] [estimativa] [memória]

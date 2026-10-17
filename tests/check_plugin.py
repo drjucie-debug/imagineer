@@ -106,6 +106,24 @@ def main():
     assert not (ROOT / "examples/vender-carros.md").exists(), "old-engine example must go"
     readme = (ROOT / "README.md").read_text()
     assert "afiliado" in readme, "trademark/affiliation disclaimer missing"
+
+    # v0.6: postcard, [memória] tag, two-layer delivery, park map, monday kit, overdue nag, ghost 1000, evals.
+    template = (SKILL / "references/brief-template.md").read_text()
+    creation = (SKILL / "references/creation-template.md").read_text()
+    for must in ("Cartão-postal", "Kit de segunda-feira", "fantasma 1000", "[memória]"):
+        assert must in template, f"brief template missing {must}"
+    for must in ("Cartão-postal", "Silhueta em 3 traços", "fantasma 1000"):
+        assert must in creation, f"creation template missing {must}"
+    assert "[memória]" in (ROOT / "agents/futurist-scout.md").read_text()
+    assert "Kit de segunda-feira" in (ROOT / "agents/show-engineer.md").read_text()
+    checklist = (SKILL / "references/checklist.md").read_text()
+    assert "Cartão-postal" in checklist and "[memória]" in checklist
+    assert "mapa do parque" in imagine and "Duas camadas" in imagine and "próximo brinquedo" in imagine
+    ideas_fmt = (SKILL / "references/ideas-format.md").read_text()
+    assert "Teste até" in ideas_fmt and "vaga" in ideas_fmt
+    for d in ("criacao-entrega-fichas", "historia-primeiro", "sim-se"):
+        assert (ROOT / "evals" / d / "prompt.md").exists(), f"eval case {d} missing"
+        assert list((ROOT / "evals" / d / "graders").glob("*.md")), f"eval {d} has no graders"
     assert "A história primeiro" in readme, "README still describes the old engine"
     assert "vender-carros" not in readme and "Downloads/claude-imagineer" not in readme
 
@@ -139,15 +157,16 @@ def check_session_hook():
         (project / ".imagineer/briefs").mkdir(parents=True)
         (project / ".imagineer/briefs/vender-online-2026-10-16.md").write_text("x")
         (project / ".imagineer/ideas.md").write_text(
-            "# Ideias\n\n| Data | Ideia | Brief | Horizonte | Status |\n|---|---|---|---|---|\n"
-            "| 2026-10-16 | Vendedor em 30s | briefs/vender-online-2026-10-16.md | H1 | testando |\n"
-            "| 2026-10-16 | Vaquinha | briefs/vender-online-2026-10-16.md | H1 | sonho |\n"
-            "| 2026-10-01 | Loja sem site | briefs/x.md | H3 | arquivada |\n")
+            "# Ideias\n\n| Data | Ideia | Brief | Horizonte | Status | Resultado | Teste até |\n|---|---|---|---|---|---|---|\n"
+            "| 2026-10-16 | Vendedor em 30s | briefs/vender-online-2026-10-16.md | H1 | testando | | 2020-01-01 |\n"
+            "| 2026-10-16 | Vaquinha | briefs/vender-online-2026-10-16.md | H1 | sonho | | |\n"
+            "| 2026-10-01 | Loja sem site | briefs/x.md | H3 | arquivada | | |\n")
         out = run(project)
         assert "3 ideias" in out, out
         assert "Vendedor em 30s" in out and "Vaquinha" in out, out
         assert "Loja sem site" not in out, "archived ideas must not be listed"
         assert "vender-online-2026-10-16.md" in out, "latest brief missing"
+        assert "2020-01-01" in out and "vencid" in out, "overdue experiment nag missing"
 
 
 if __name__ == "__main__":

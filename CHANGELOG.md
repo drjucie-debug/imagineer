@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.6.0 — 2026-10-17
+- **Cartão-postal:** o brief abre com a história em 1 frase, a cena mais forte e um prompt de esboço à la Herb Ryman; no modo criação, cada ficha ganha "silhueta em 3 traços".
+- **Etiqueta `[memória]`:** fato sem fonte lida não entra no sumário nem no cartão-postal.
+- **Entrega em duas camadas:** a conversa mostra o essencial; o brief inteiro vai para `.imagineer/briefs/`.
+- **Mapa do parque:** `/imagine` sem argumento mostra as 3 portas; todo brief fecha com um "próximo brinquedo".
+- **Kit de segunda-feira:** o experimento H1 sai com a peça pronta, não só o plano.
+- **Cobrança:** coluna `Teste até` no ideas.md; o hook avisa experimento vencido.
+- **Fantasma 1000:** todo brief termina com uma pergunta em aberto (status `vaga`) que semeia o próximo /spark.
+- **Evals comportamentais:** 3 casos em `evals/` para `claude plugin eval` (criação entrega fichas; história primeiro; "Sim, se…").
+
 ## 0.5.1 — 2026-10-17
 - Empacotamento para GitHub: exemplos reais (estratégia e criação), CHANGELOG, CI, .gitignore, aviso de marca.
 

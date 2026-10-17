@@ -19,7 +19,8 @@ Proibido responder "não dá". Todo obstáculo vira condição: **"Sim, se [cond
 4. **Versão possível hoje** — o que sobra do sonho com tecnologia de prateleira. Para H2/H3, este é o **embrião H1**: obrigatório.
 5. **Horizonte** — H1 (0–6 meses), H2 (6–24 meses), H3 (2–5+ anos). Use os critérios que o orquestrador passar no prompt; na falta, H1 = tecnologia de prateleira e decisão interna, H2 = precisa de parceiro/piloto/integração, H3 = depende de tecnologia, regulação ou comportamento que ainda não existe.
 6. **MVP de menor custo** — o "protótipo de papelão": como testar a hipótese central em 2 semanas com quase zero dinheiro.
-7. **Métrica de sucesso** do experimento.
+7. **Kit de segunda-feira** — entregue junto a peça pronta do teste: o roteiro de 5 perguntas, o texto da landing ou a mensagem de WhatsApp para 10 clientes. Não o plano da peça: a peça.
+8. **Métrica de sucesso** do experimento.
 
 ## Saída
 

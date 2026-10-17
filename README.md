@@ -137,6 +137,7 @@ Exemplo: `/imagine --quick --ideas 30 novas formas de vender carros`
 ```bash
 python3 tests/check_plugin.py   # imprime "ok" se a estrutura está íntegra
 claude plugin validate .
+claude plugin eval . --no-publish  # suíte comportamental em evals/ — CUIDADO: roda sessões reais (custa dinheiro)
 ```
 
 O Claude Code instala uma **cópia** do plugin em `~/.claude/plugins/cache/`. Depois de editar (e subir a `version` no plugin.json), atualize e abra uma sessão nova:
@@ -150,10 +151,11 @@ claude plugin update imagineer@imagineer
 
 - **v0.1** — comandos, agentes, skill, template e exemplo.
 - **v0.2** — memória de ideias por projeto (`.imagineer/ideas.md` + `briefs/`); hook `SessionStart` que injeta o resumo dessa memória (silencioso em projetos sem `.imagineer/`); `/imagine` lê CLAUDE.md/README do projeto e pergunta quem é o convidado quando o pedido é vago.
-- **v0.5** (atual) — motor refundado no método real da WDI: a história primeiro, teste do coração, "Sim, se…", Dez Mandamentos de Mickey no checklist (fontes em `skills/imagineering-method/references/principios.md`).
+- **v0.6** (atual) — cartão-postal com esboço no topo do brief, etiqueta [memória], entrega em duas camadas, mapa do parque, kit de segunda-feira, cobrança de experimento vencido (Teste até), fantasma 1000 e suíte de evals comportamental (`claude plugin eval`).
+- **v0.5** — motor refundado no método real da WDI: a história primeiro, teste do coração, "Sim, se…", Dez Mandamentos de Mickey no checklist (fontes em `skills/imagineering-method/references/principios.md`).
 - **v0.4** — modo criação: pedidos de *coisas* (criaturas, personagens, produtos, nomes) entregam as coisas com ficha, em vez de estratégia; regra "nunca troque o entregável"; `/spark` para um conceito rápido.
 - **v0.3** — shortlist com nota, veto pós-plussing, checklist de qualidade, fontes etiquetadas; `/ideas` para status e resultado de experimentos (cobre o "Idea Vault" sem servidor MCP — servidor só se houver várias pessoas votando).
-- **v0.6** — modo "Imagineer contínuo": tarefa agendada semanal que varre sinais do futuro de cada projeto ativo e envia um "postcard do futuro".
+- **v0.7** — modo "Imagineer contínuo": tarefa agendada semanal que varre sinais do futuro de cada projeto ativo e envia um "postcard do futuro".
 - **v1.0** — artifact interativo de quadro (Blue Sky board) com arrastar ideias entre horizontes.
 
 ## O nome

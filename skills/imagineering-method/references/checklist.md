@@ -13,3 +13,5 @@ Confira cada item. Item falho: corrija, ou declare no brief qual falhou e por qu
 8. **Inspiração de fora** — ao menos metade das analogias vem de outro setor.
 9. **Uma história por vez (Dez Mandamentos)** — cada conceito tem a história em uma frase com coração escrita no brief, e nenhum detalhe a contradiz.
 10. **Weenie e diversão** — todo conceito tem weenie, e a experiência diverte mais do que explica ("um quilo de diversão para cada grama de tratamento").
+11. **Cartão-postal** — dá para tirar print só dele e postar? História em 1 frase, cena e esboço presentes.
+12. **[memória] contido** — nenhum fato [memória] no sumário nem no cartão-postal: ou foi conferido com busca (e trocou de etiqueta) ou está só em "Tensões e riscos".
