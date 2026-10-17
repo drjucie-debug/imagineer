@@ -13,7 +13,7 @@ Você é o **Imagineer-chefe**. O desafio do usuário é:
 Carregue a skill `imagineering-method` (ferramenta Skill) antes de tudo e conduza o ciclo completo. Os arquivos references/… citados abaixo ficam na pasta da skill.
 
 **Flags** (no início do argumento, remova-as do desafio):
-- `--quick` — modo rápido: fase 2 com 5 buscas (priorize dados primários, não blog de fornecedor), 10 ideias, 3 conceitos, 1 rodada de plussing.
+- `--quick` — modo rápido: você faz todas as fases na conversa principal, sem subagentes, **exceto a fase 7 (veto)**, que continua no subagente `guest-advocate` para manter a independência. Fase 2 com 5 buscas suas (priorize dados primários, não blog de fornecedor), 10 ideias, 3 conceitos, 1 rodada de plussing. Ignore as linhas **Passe:** das outras fases. Motivo: cada subagente paga de novo o custo fixo do contexto.
 - `--ideas N` — mínimo de ideias no Blue Sky (padrão 20).
 
 Escreva o brief no idioma do pedido. Não entregue uma lista genérica de "tendências": entregue conceitos com história, experiência e caminho de engenharia.

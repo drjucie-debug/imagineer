@@ -93,6 +93,6 @@ Ver `references/ideas-format.md`. Leia `.imagineer/ideas.md` antes de gerar idei
 
 ## Calibragem
 
-- Pedido curto ou flag `--quick`: fase 2 com 5 buscas, 10 ideias, 3 conceitos, 1 rodada de plussing.
+- Pedido curto ou flag `--quick`: tudo na conversa principal, só o veto num subagente `guest-advocate`; fase 2 com 5 buscas, 10 ideias, 3 conceitos, 1 rodada de plussing.
 - Pedido amplo ("o futuro do varejo"): faça a fase 2 completa e 5 conceitos.
 - Se o usuário tem um projeto em andamento (CLAUDE.md, README, arquivos), leia antes e ancore os conceitos nele.

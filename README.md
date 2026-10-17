@@ -28,7 +28,7 @@ O plugin entrega um **Imagineering Brief** com:
 
 Para **um** conceito rápido (≈1 min, sem subagentes nem pesquisa): `/imagineer:spark <desafio>` — reenquadra, 8 ideias, escolhe 1, cena, plus, veto e MVP de 2 semanas.
 
-Exemplos: [`examples/moda-online.md`](examples/moda-online.md) (ciclo real de 9 fases, `--quick`, com fontes) e [`examples/vender-carros.md`](examples/vender-carros.md) (ilustrativo, sem pesquisa).
+Exemplos: [`examples/moda-online.md`](examples/moda-online.md) (ciclo real de 9 fases com subagentes, antes do `--quick` enxuto, com fontes) e [`examples/vender-carros.md`](examples/vender-carros.md) (ilustrativo, sem pesquisa).
 
 ---
 
@@ -121,7 +121,7 @@ No app Claude, o conteúdo de `skills/imagineering-method` pode ser enviado como
 
 | Flag | Padrão | Efeito |
 |---|---|---|
-| `--quick` | desligado | pula pesquisa, 10 ideias, 3 conceitos, 1 rodada de plussing |
+| `--quick` | desligado | sem subagentes (só o veto fica independente), 5 buscas, 10 ideias, 3 conceitos, 1 rodada de plussing |
 | `--ideas N` | `20` | quantidade mínima de ideias no Blue Sky |
 
 O brief sai no idioma do pedido.

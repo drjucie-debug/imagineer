@@ -83,6 +83,10 @@ def main():
         assert must in body, f"/spark missing {must}"
     assert "Como tornar real:**" in body, "/spark needs a creation-mode output format"
 
+    # --quick: everything in the main thread except the independent veto (1 subagent, not 6).
+    quick = next(l for l in imagine.splitlines() if l.startswith("- `--quick`"))
+    assert "conversa principal" in quick and "guest-advocate" in quick, quick
+
     # Creation requests ("imagine novos pokémons") must get the things themselves, not a strategy.
     assert (SKILL / "references/creation-template.md").exists(), "no template for creation mode"
     for f in [SKILL / "SKILL.md", ROOT / "commands/imagine.md", spark,
