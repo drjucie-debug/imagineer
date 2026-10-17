@@ -1,0 +1,11 @@
+{
+  "name": "claude-imagineer",
+  "version": "0.1.0",
+  "description": "Pensa à frente de qualquer projeto com o método dos Imagineers: Blue Sky sem limites, história antes de produto, experiência do convidado, plussing e engenharia de viabilidade.",
+  "author": {
+    "name": "Juciê",
+    "email": "drjucie@gmail.com"
+  },
+  "keywords": ["inovacao", "futuro", "ideacao", "design-de-experiencia", "estrategia", "imagineering"],
+  "license": "MIT"
+}
