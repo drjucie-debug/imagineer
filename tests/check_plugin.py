@@ -81,6 +81,7 @@ def main():
     assert "Agent" not in fm.get("allowed-tools", ""), "/spark must run without subagents"
     for must in ("Veto", "ideas.md", "MVP", "--quick"):
         assert must in body, f"/spark missing {must}"
+    assert "Como tornar real:**" in body, "/spark needs a creation-mode output format"
 
     # Creation requests ("imagine novos pokémons") must get the things themselves, not a strategy.
     assert (SKILL / "references/creation-template.md").exists(), "no template for creation mode"
